@@ -85,6 +85,14 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    
+    .img-hover {
+      transition: transform 0.5s ease;
+    }
+    
+    .img-hover:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 
@@ -133,9 +141,16 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="gradient-bg text-white overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+  <!-- Hero Section with Image -->
+  <header class="relative overflow-hidden gradient-bg text-white">
+    <div class="absolute inset-0">
+      <img 
+        src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+        alt="তাজা ফল ও শাকসবজি"
+        class="w-full h-full object-cover opacity-20"
+      >
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative">
       <div class="grid md:grid-cols-2 gap-10 items-center">
         <div class="slide-left">
           <h1 class="text-4xl md:text-5xl font-bold mb-4">বিশুদ্ধ পণ্যের নির্ভরযোগ্য উৎস</h1>
@@ -149,6 +164,11 @@
         </div>
         <div class="slide-right relative">
           <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+            <img 
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              alt="পণ্য সংগ্রহ"
+              class="rounded-xl w-full h-64 object-cover mb-6"
+            >
             <div class="grid grid-cols-2 gap-6">
               <div class="bg-white/20 p-4 rounded-xl text-center">
                 <i class="fas fa-award text-3xl mb-2"></i>
@@ -157,14 +177,6 @@
               <div class="bg-white/20 p-4 rounded-xl text-center">
                 <i class="fas fa-truck text-3xl mb-2"></i>
                 <p class="font-bold">দ্রুত ডেলিভারি</p>
-              </div>
-              <div class="bg-white/20 p-4 rounded-xl text-center">
-                <i class="fas fa-shield-alt text-3xl mb-2"></i>
-                <p class="font-bold">ভেজালমুক্ত</p>
-              </div>
-              <div class="bg-white/20 p-4 rounded-xl text-center">
-                <i class="fas fa-tag text-3xl mb-2"></i>
-                <p class="font-bold">সাশ্রয়ী মূল্য</p>
               </div>
             </div>
           </div>
@@ -192,8 +204,8 @@
             <i class="fas fa-envelope text-white text-xl"></i>
           </div>
           <p class="font-bold text-indigo-600 text-lg">ইমেইল</p>
-          <p class="text-gray-700">info@sufiamart.com</p>
-          <p class="text-gray-700">order@sufiamart.com</p>
+          <p class="text-gray-700">info@sodaighor.com</p>
+          <p class="text-gray-700">order@sodaighor.com</p>
         </div>
         <div class="text-center p-4 border-r border-gray-100">
           <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
@@ -208,7 +220,7 @@
             <i class="fas fa-globe text-white text-xl"></i>
           </div>
           <p class="font-bold text-indigo-600 text-lg">ওয়েবসাইট</p>
-          <p class="text-gray-700">www.sufiamart.com</p>
+          <p class="text-gray-700">www.sodaighor.com</p>
           <p class="text-gray-700">সোশ্যাল মিডিয়া</p>
         </div>
       </div>
@@ -223,12 +235,14 @@
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        <!-- Product Card 1 -->
+        <!-- Product Card 1 - Dates -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-          <div class="relative overflow-hidden">
-            <div class="h-60 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
-              <i class="fas fa-calendar-check text-white text-7xl"></i>
-            </div>
+          <div class="relative overflow-hidden h-64">
+            <img 
+              src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              alt="আজওয়া খেজুর"
+              class="w-full h-full object-cover img-hover"
+            >
             <div class="absolute top-4 right-4">
               <span class="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">বেস্টসেলার</span>
             </div>
@@ -250,12 +264,14 @@
           </div>
         </div>
 
-        <!-- Product Card 2 -->
+        <!-- Product Card 2 - Oil -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-          <div class="relative overflow-hidden">
-            <div class="h-60 bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center">
-              <i class="fas fa-oil-can text-white text-7xl"></i>
-            </div>
+          <div class="relative overflow-hidden h-64">
+            <img 
+              src="https://images.unsplash.com/photo-1533050487297-09b450131914?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              alt="খাঁটি সরিষার তেল"
+              class="w-full h-full object-cover img-hover"
+            >
             <div class="absolute top-4 right-4">
               <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">নতুন</span>
             </div>
@@ -277,12 +293,14 @@
           </div>
         </div>
 
-        <!-- Product Card 3 -->
+        <!-- Product Card 3 - Honey -->
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
-          <div class="relative overflow-hidden">
-            <div class="h-60 bg-gradient-to-br from-yellow-500 to-amber-700 flex items-center justify-center">
-              <i class="fas fa-honey-pot text-white text-7xl"></i>
-            </div>
+          <div class="relative overflow-hidden h-64">
+            <img 
+              src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              alt="সুন্দরবনের মধু"
+              class="w-full h-full object-cover img-hover"
+            >
             <div class="absolute top-4 right-4">
               <span class="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold">পপুলার</span>
             </div>
@@ -306,11 +324,90 @@
 
       </div>
       
+      <!-- More Products Gallery -->
+      <div class="mt-16">
+        <h3 class="text-2xl font-bold text-center mb-8 gradient-text">অন্যান্য পণ্যসমূহ</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="relative rounded-xl overflow-hidden h-48">
+            <img 
+              src="https://images.unsplash.com/photo-1615485500607-1758f56c0c8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+              alt="লেবু"
+              class="w-full h-full object-cover img-hover"
+            >
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              <p class="text-white font-bold">তাজা লেবু</p>
+            </div>
+          </div>
+          <div class="relative rounded-xl overflow-hidden h-48">
+            <img 
+              src="https://images.unsplash.com/photo-1587049633312-d628ae50a8ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+              alt="বাদাম"
+              class="w-full h-full object-cover img-hover"
+            >
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              <p class="text-white font-bold">কাজু বাদাম</p>
+            </div>
+          </div>
+          <div class="relative rounded-xl overflow-hidden h-48">
+            <img 
+              src="https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+              alt="মসলা"
+              class="w-full h-full object-cover img-hover"
+            >
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              <p class="text-white font-bold">গোটা মসলা</p>
+            </div>
+          </div>
+          <div class="relative rounded-xl overflow-hidden h-48">
+            <img 
+              src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+              alt="ড্রাই ফ্রুটস"
+              class="w-full h-full object-cover img-hover"
+            >
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+              <p class="text-white font-bold">ড্রাই ফ্রুটস</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <!-- View All Button -->
       <div class="text-center mt-12">
         <a href="#" class="inline-flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold px-8 py-3 rounded-full hover:shadow-xl transition">
           সব পণ্য দেখুন <i class="fas fa-arrow-right ml-2"></i>
         </a>
+      </div>
+    </section>
+
+    <!-- About Us Section with Image -->
+    <section class="fade-in bg-white rounded-2xl shadow-xl overflow-hidden">
+      <div class="grid md:grid-cols-2">
+        <div class="p-10">
+          <h2 class="text-4xl font-bold gradient-text mb-6">আমাদের সম্পর্কে</h2>
+          <p class="text-gray-600 mb-4">সদাই ঘর শুরু হয়েছে ২০১০ সালে, একটি সহজ লক্ষ্য নিয়ে - মানুষকে ভেজালমুক্ত, বিশুদ্ধ ও পুষ্টিকর পণ্য সরবরাহ করা।</p>
+          <p class="text-gray-600 mb-4">আমরা সরাসরি কৃষক এবং উৎপাদনকারীদের কাছ থেকে পণ্য সংগ্রহ করি, যাতে মধ্যস্বত্বভোগীদের হস্তক্ষেপ না থাকে এবং গ্রাহকরা পেতে পারেন যৌক্তিক মূল্যে সর্বোচ্চ মানের পণ্য।</p>
+          <div class="flex items-center mt-8">
+            <div class="mr-6">
+              <p class="text-3xl font-bold text-indigo-600">১০০০+</p>
+              <p class="text-gray-600">সন্তুষ্ট গ্রাহক</p>
+            </div>
+            <div class="mr-6">
+              <p class="text-3xl font-bold text-indigo-600">৫০+</p>
+              <p class="text-gray-600">পণ্যের সমাহার</p>
+            </div>
+            <div>
+              <p class="text-3xl font-bold text-indigo-600">১২+</p>
+              <p class="text-gray-600">বছরের অভিজ্ঞতা</p>
+            </div>
+          </div>
+        </div>
+        <div class="relative min-h-96">
+          <img 
+            src="https://images.unsplash.com/photo-1604719312566-8912e6597d6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            alt="আমাদের দোকান"
+            class="absolute inset-0 w-full h-full object-cover"
+          >
+        </div>
       </div>
     </section>
 
@@ -368,9 +465,11 @@
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white p-6 rounded-2xl shadow-lg">
           <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
-              র
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1494790108755-2616b786d4c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+              alt="রহিমা আক্তার"
+              class="w-12 h-12 rounded-full object-cover mr-4"
+            >
             <div>
               <h4 class="font-bold">রহিমা আক্তার</h4>
               <p class="text-gray-500 text-sm">ঢাকা</p>
@@ -388,9 +487,11 @@
         
         <div class="bg-white p-6 rounded-2xl shadow-lg">
           <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
-              ক
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+              alt="কামরুল হাসান"
+              class="w-12 h-12 rounded-full object-cover mr-4"
+            >
             <div>
               <h4 class="font-bold">কামরুল হাসান</h4>
               <p class="text-gray-500 text-sm">চট্টগ্রাম</p>
@@ -408,9 +509,11 @@
         
         <div class="bg-white p-6 rounded-2xl shadow-lg">
           <div class="flex items-center mb-4">
-            <div class="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
-              স
-            </div>
+            <img 
+              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+              alt="সাবরিনা সুলতানা"
+              class="w-12 h-12 rounded-full object-cover mr-4"
+            >
             <div>
               <h4 class="font-bold">সাবরিনা সুলতানা</h4>
               <p class="text-gray-500 text-sm">সিলেট</p>
@@ -430,14 +533,23 @@
 
     <!-- Newsletter -->
     <section class="fade-in">
-      <div class="gradient-bg rounded-2xl p-10 text-center text-white">
-        <h2 class="text-3xl font-bold mb-4">সবার আগে নতুন অফার পেতে চান?</h2>
-        <p class="mb-6 max-w-xl mx-auto">আমাদের নিউজলেটারে সাবস্ক্রাইব করুন এবং নতুন পণ্য ও অফার সম্পর্কে সবার আগে জানুন</p>
-        <div class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
-          <input type="email" placeholder="আপনার ইমেইল এড্রেস" class="flex-grow px-4 py-3 rounded-full focus:outline-none text-gray-800">
-          <button class="bg-white text-indigo-600 font-bold px-6 py-3 rounded-full hover:bg-gray-100 transition whitespace-nowrap">
-            <i class="fas fa-paper-plane mr-2"></i> সাবস্ক্রাইব করুন
-          </button>
+      <div class="gradient-bg rounded-2xl p-10 text-center text-white relative overflow-hidden">
+        <div class="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=10" 
+            alt="পণ্য সংগ্রহ"
+            class="w-full h-full object-cover opacity-10"
+          >
+        </div>
+        <div class="relative">
+          <h2 class="text-3xl font-bold mb-4">সবার আগে নতুন অফার পেতে চান?</h2>
+          <p class="mb-6 max-w-xl mx-auto">আমাদের নিউজলেটারে সাবস্ক্রাইব করুন এবং নতুন পণ্য ও অফার সম্পর্কে সবার আগে জানুন</p>
+          <div class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+            <input type="email" placeholder="আপনার ইমেইল এড্রেস" class="flex-grow px-4 py-3 rounded-full focus:outline-none text-gray-800">
+            <button class="bg-white text-indigo-600 font-bold px-6 py-3 rounded-full hover:bg-gray-100 transition whitespace-nowrap">
+              <i class="fas fa-paper-plane mr-2"></i> সাবস্ক্রাইব করুন
+            </button>
+          </div>
         </div>
       </div>
     </section>
@@ -487,7 +599,7 @@
             </li>
             <li class="flex items-center">
               <i class="fas fa-envelope mr-3 text-indigo-300"></i>
-              <span>info@sufiamart.com</span>
+              <span>info@সদাই ঘর.com</span>
             </li>
             <li class="flex items-center">
               <i class="fas fa-map-marker-alt mr-3 text-indigo-300"></i>
