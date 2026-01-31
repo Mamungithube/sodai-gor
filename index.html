@@ -1,387 +1,556 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>পণ্য পোর্টফোলিও - গুণগত মানের সর্বচ্চ নিশ্চয়তা</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>সুফিয়া মার্ট | বিশুদ্ধ পণ্যের নিশ্চয়তা</title>
 
-        body {
-            font-family: 'Kalpurush', 'Noto Sans Bengali', 'SolaimanLipi', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        /* Header Section */
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        header p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .tagline {
-            background: rgba(255,255,255,0.2);
-            padding: 15px;
-            border-radius: 10px;
-            display: inline-block;
-            font-size: 1.3em;
-            font-weight: bold;
-        }
-
-        /* Contact Info */
-        .contact-info {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            margin: 10px;
-            text-align: center;
-        }
-
-        .contact-item i {
-            font-size: 1.5em;
-            color: #667eea;
-            margin-bottom: 5px;
-        }
-
-        .contact-item strong {
-            display: block;
-            color: #667eea;
-            margin-bottom: 5px;
-        }
-
-        /* Products Grid */
-        .products-section {
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2em;
-            color: #667eea;
-            margin-bottom: 30px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-bottom: 30px;
-        }
-
-        .product-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 250px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4em;
-            color: white;
-        }
-
-        .product-content {
-            padding: 20px;
-        }
-
-        .product-title {
-            font-size: 1.8em;
-            color: #667eea;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .product-description {
-            color: #666;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        .quality-badge {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 0.9em;
-            font-weight: bold;
-        }
-
-        /* Features Section */
-        .features-section {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .feature-item {
-            text-align: center;
-            padding: 20px;
-            border: 2px solid #667eea;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-item:hover {
-            background: #667eea;
-            color: white;
-        }
-
-        .feature-icon {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        .feature-title {
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        /* Footer */
-        footer {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            text-align: center;
-            padding: 30px;
-            border-radius: 15px;
-            margin-top: 30px;
-        }
-
-        footer p {
-            margin: 10px 0;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8em;
-            }
-
-            .tagline {
-                font-size: 1em;
-            }
-
-            .product-title {
-                font-size: 1.5em;
-            }
-        }
-    </style>
+  <!-- Custom Styles -->
+  <style>
+    * {
+      font-family: 'Hind Siliguri', sans-serif;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+    
+    .slide-left {
+      animation: slideInLeft 0.8s ease forwards;
+    }
+    
+    .slide-right {
+      animation: slideInRight 0.8s ease forwards;
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+    }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, #4f46e5, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <!-- Header -->
-        <header>
-            <h1>আমাদের পণ্য সংগ্রহ</h1>
-            <p>বিশুদ্ধ ও খাঁটি পণ্যের নির্ভরযোগ্য উৎস</p>
-            <div class="tagline">
-                ✨ গুণগত মানের সর্বচ্চ নিশ্চয়তা ✨
-            </div>
-        </header>
 
-        <!-- Contact Information -->
-        <div class="contact-info">
-            <div class="contact-item">
-                <strong>📞 যোগাযোগ</strong>
-                <p>০১৭১২-৩৪৫৬৭৮</p>
+<body class="bg-gradient-to-b from-slate-50 to-indigo-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <div class="flex items-center">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white text-lg"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold gradient-text">সুফিয়া মার্ট</h1>
+            <p class="text-xs text-gray-500 -mt-1">বিশুদ্ধতার প্রতিশ্রুতি</p>
+          </div>
+        </div>
+        
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">হোম</a>
+          <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">পণ্য</a>
+          <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">আমাদের সম্পর্কে</a>
+          <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium transition">যোগাযোগ</a>
+          <a href="#" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:shadow-lg transition">অর্ডার করুন</a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menuBtn" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-2 shadow-lg rounded-lg mt-2">
+        <a href="#" class="block py-2 px-4 hover:bg-indigo-50 rounded">হোম</a>
+        <a href="#" class="block py-2 px-4 hover:bg-indigo-50 rounded">পণ্য</a>
+        <a href="#" class="block py-2 px-4 hover:bg-indigo-50 rounded">আমাদের সম্পর্কে</a>
+        <a href="#" class="block py-2 px-4 hover:bg-indigo-50 rounded">যোগাযোগ</a>
+        <a href="#" class="block py-2 px-4 bg-indigo-600 text-white rounded-full text-center mt-2">অর্ডার করুন</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="gradient-bg text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="slide-left">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">বিশুদ্ধ পণ্যের নির্ভরযোগ্য উৎস</h1>
+          <p class="text-lg md:text-xl mb-8 opacity-90">আমরা সরবরাহ করি ১০০% খাঁটি ও ভেজালমুক্ত পণ্য। স্বাস্থ্যসম্মত জীবনযাপনে আমাদের সাথে থাকুন।</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#" class="bg-white text-indigo-600 font-bold px-6 py-3 rounded-full hover:shadow-xl transition">পণ্য দেখুন</a>
+            <a href="#" class="bg-transparent border-2 border-white text-white font-bold px-6 py-3 rounded-full hover:bg-white/10 transition">
+              <i class="fas fa-phone-alt mr-2"></i> অর্ডার করুন
+            </a>
+          </div>
+        </div>
+        <div class="slide-right relative">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+            <div class="grid grid-cols-2 gap-6">
+              <div class="bg-white/20 p-4 rounded-xl text-center">
+                <i class="fas fa-award text-3xl mb-2"></i>
+                <p class="font-bold">গুণগত মান</p>
+              </div>
+              <div class="bg-white/20 p-4 rounded-xl text-center">
+                <i class="fas fa-truck text-3xl mb-2"></i>
+                <p class="font-bold">দ্রুত ডেলিভারি</p>
+              </div>
+              <div class="bg-white/20 p-4 rounded-xl text-center">
+                <i class="fas fa-shield-alt text-3xl mb-2"></i>
+                <p class="font-bold">ভেজালমুক্ত</p>
+              </div>
+              <div class="bg-white/20 p-4 rounded-xl text-center">
+                <i class="fas fa-tag text-3xl mb-2"></i>
+                <p class="font-bold">সাশ্রয়ী মূল্য</p>
+              </div>
             </div>
-            <div class="contact-item">
-                <strong>📧 ইমেইল</strong>
-                <p>info@example.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 space-y-16">
+
+    <!-- Contact Info -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl grid md:grid-cols-4 gap-6 p-8">
+        <div class="text-center p-4 border-r border-gray-100">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-phone-alt text-white text-xl"></i>
+          </div>
+          <p class="font-bold text-indigo-600 text-lg">যোগাযোগ</p>
+          <p class="text-gray-700">০১৭১২-৩৪৫৬৭৮</p>
+          <p class="text-gray-700">০১৯১২-৭৮৯১০১</p>
+        </div>
+        <div class="text-center p-4 border-r border-gray-100">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-envelope text-white text-xl"></i>
+          </div>
+          <p class="font-bold text-indigo-600 text-lg">ইমেইল</p>
+          <p class="text-gray-700">info@sufiamart.com</p>
+          <p class="text-gray-700">order@sufiamart.com</p>
+        </div>
+        <div class="text-center p-4 border-r border-gray-100">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-map-marker-alt text-white text-xl"></i>
+          </div>
+          <p class="font-bold text-indigo-600 text-lg">ঠিকানা</p>
+          <p class="text-gray-700">বিজয় নগর, ঢাকা</p>
+          <p class="text-gray-700">বাংলাদেশ</p>
+        </div>
+        <div class="text-center p-4">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-globe text-white text-xl"></i>
+          </div>
+          <p class="font-bold text-indigo-600 text-lg">ওয়েবসাইট</p>
+          <p class="text-gray-700">www.sufiamart.com</p>
+          <p class="text-gray-700">সোশ্যাল মিডিয়া</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold gradient-text mb-4">আমাদের পণ্যসমূহ</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">আমরা সরাসরি উৎপাদনকারীদের কাছ থেকে পণ্য সংগ্রহ করে থাকি, যাতে আপনি পেতে পারেন সর্বোচ্চ গুণগত মানের পণ্য।</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Product Card 1 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+          <div class="relative overflow-hidden">
+            <div class="h-60 bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+              <i class="fas fa-calendar-check text-white text-7xl"></i>
             </div>
-            <div class="contact-item">
-                <strong>📍 ঠিকানা</strong>
-                <p>ঢাকা, বাংলাদেশ</p>
+            <div class="absolute top-4 right-4">
+              <span class="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold">বেস্টসেলার</span>
             </div>
-            <div class="contact-item">
-                <strong>🌐 পেইজ</strong>
-                <p>www.example.com</p>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-2xl font-bold text-gray-800">আজওয়া খেজুর</h3>
+              <span class="text-lg font-bold text-indigo-600">৫৫০৳/কেজি</span>
             </div>
+            <p class="text-gray-600 mb-4">সৌদি আরব থেকে আমদানিকৃত খাঁটি আজওয়া খেজুর। উচ্চ পুষ্টিমান ও রুচিশীল স্বাদের জন্য বিখ্যাত।</p>
+            <div class="flex justify-between items-center">
+              <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                <i class="fas fa-check-circle mr-1"></i> ১০০% বিশুদ্ধ
+              </span>
+              <button class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full hover:shadow-md transition">
+                <i class="fas fa-shopping-cart mr-2"></i> অর্ডার করুন
+              </button>
+            </div>
+          </div>
         </div>
 
-        <!-- Products Section -->
-        <section class="products-section">
-            <h2 class="section-title">আমাদের মানসম্পন্ন পণ্যসমূহ</h2>
-            
-            <div class="products-grid">
-                <!-- Product 1: Dates -->
-                <div class="product-card">
-                    <div class="product-image">🌴</div>
-                    <div class="product-content">
-                        <h3 class="product-title">খেজুর</h3>
-                        <p class="product-description">
-                            আরব থেকে আমদানিকৃত সর্বোচ্চ মানের খেজুর। প্রাকৃতিক মিষ্টতা ও পুষ্টিগুণে ভরপুর। প্রতিটি খেজুর যত্নসহকারে বাছাই করা এবং স্বাস্থ্যসম্মত উপায়ে সংরক্ষিত।
-                        </p>
-                        <span class="quality-badge">১০০% বিশুদ্ধ</span>
-                    </div>
-                </div>
-
-                <!-- Product 2: Oil -->
-                <div class="product-card">
-                    <div class="product-image">🫒</div>
-                    <div class="product-content">
-                        <h3 class="product-title">তেল</h3>
-                        <p class="product-description">
-                            খাঁটি সরিষা ও অলিভ অয়েল। কোনো প্রকার ভেজাল মুক্ত এবং স্বাস্থ্যকর। ঐতিহ্যবাহী পদ্ধতিতে প্রস্তুতকৃত, যা আপনার রান্নাকে করবে আরও স্বাদযুক্ত ও পুষ্টিকর।
-                        </p>
-                        <span class="quality-badge">ভেজালমুক্ত</span>
-                    </div>
-                </div>
-
-                <!-- Product 3: Attar -->
-                <div class="product-card">
-                    <div class="product-image">🌸</div>
-                    <div class="product-content">
-                        <h3 class="product-title">আতর</h3>
-                        <p class="product-description">
-                            প্রাকৃতিক ফুল ও উদ্ভিদ থেকে তৈরি সুগন্ধি আতর। দীর্ঘস্থায়ী সুবাস এবং অ্যালকোহল মুক্ত। বিভিন্ন আকর্ষণীয় সুগন্ধে পাওয়া যাচ্ছে যা আপনাকে দেবে বিশেষ পরিচয়।
-                        </p>
-                        <span class="quality-badge">প্রাকৃতিক</span>
-                    </div>
-                </div>
-
-                <!-- Product 4: Honey -->
-                <div class="product-card">
-                    <div class="product-image">🍯</div>
-                    <div class="product-content">
-                        <h3 class="product-title">মধু</h3>
-                        <p class="product-description">
-                            সুন্দরবনের খাঁটি মধু। প্রাকৃতিক উপায়ে সংগৃহীত, কোনো রাসায়নিক প্রক্রিয়াবিহীন। স্বাস্থ্য উপকারিতায় ভরপুর এই মধু আপনার পরিবারের জন্য সেরা পছন্দ।
-                        </p>
-                        <span class="quality-badge">খাঁটি মধু</span>
-                    </div>
-                </div>
-
-                <!-- Product 5: Red Sugar -->
-                <div class="product-card">
-                    <div class="product-image">🍬</div>
-                    <div class="product-content">
-                        <h3 class="product-title">লাল চিনি</h3>
-                        <p class="product-description">
-                            প্রাকৃতিক লাল চিনি, যা তৈরি হয় আখের রস থেকে। সাদা চিনির তুলনায় বেশি পুষ্টিগুণসম্পন্ন এবং স্বাস্থ্যসম্মত। প্রতিদিনের খাবারে ব্যবহারের জন্য আদর্শ।
-                        </p>
-                        <span class="quality-badge">প্রাকৃতিক</span>
-                    </div>
-                </div>
-
-                <!-- Product 6: Additional -->
-                <div class="product-card">
-                    <div class="product-image">🌾</div>
-                    <div class="product-content">
-                        <h3 class="product-title">অন্যান্য পণ্য</h3>
-                        <p class="product-description">
-                            আরও বিভিন্ন ধরনের মানসম্পন্ন প্রাকৃতিক পণ্য পাওয়া যাচ্ছে। সকল পণ্যে রয়েছে আমাদের গুণগত মানের নিশ্চয়তা এবং গ্রাহক সন্তুষ্টির প্রতিশ্রুতি।
-                        </p>
-                        <span class="quality-badge">মান নিশ্চিত</span>
-                    </div>
-                </div>
+        <!-- Product Card 2 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+          <div class="relative overflow-hidden">
+            <div class="h-60 bg-gradient-to-br from-green-500 to-emerald-700 flex items-center justify-center">
+              <i class="fas fa-oil-can text-white text-7xl"></i>
             </div>
-        </section>
-
-        <!-- Features Section -->
-        <section class="features-section">
-            <h2 class="section-title">কেন আমাদের পছন্দ করবেন?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">✅</div>
-                    <div class="feature-title">১০০% খাঁটি পণ্য</div>
-                    <p>সকল পণ্য সম্পূর্ণ ভেজালমুক্ত এবং বিশুদ্ধ</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🔬</div>
-                    <div class="feature-title">মান পরীক্ষিত</div>
-                    <p>প্রতিটি পণ্য ল্যাবে পরীক্ষা করা এবং সার্টিফাইড</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🚚</div>
-                    <div class="feature-title">দ্রুত সরবরাহ</div>
-                    <p>সারাদেশে দ্রুত ও নিরাপদ ডেলিভারি সেবা</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">💰</div>
-                    <div class="feature-title">সাশ্রয়ী মূল্য</div>
-                    <p>উন্নত মানের পণ্য যুক্তিসঙ্গত দামে</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🤝</div>
-                    <div class="feature-title">বিশ্বস্ত সেবা</div>
-                    <p>গ্রাহক সন্তুষ্টিই আমাদের প্রথম লক্ষ্য</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon">🎁</div>
-                    <div class="feature-title">বিশেষ অফার</div>
-                    <p>নিয়মিত গ্রাহকদের জন্য বিশেষ ছাড় ও উপহার</p>
-                </div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">নতুন</span>
             </div>
-        </section>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-2xl font-bold text-gray-800">খাঁটি সরিষার তেল</h3>
+              <span class="text-lg font-bold text-indigo-600">২২০৳/লিটার</span>
+            </div>
+            <p class="text-gray-600 mb-4">স্থানীয় সরিষা থেকে প্রেস করে তৈরি খাঁটি তেল। কোন রাসায়নিক ও ভেজাল নেই। প্রেসিং তারিখ সহ প্যাকেট।</p>
+            <div class="flex justify-between items-center">
+              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
+                <i class="fas fa-leaf mr-1"></i> অর্গানিক
+              </span>
+              <button class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full hover:shadow-md transition">
+                <i class="fas fa-shopping-cart mr-2"></i> অর্ডার করুন
+              </button>
+            </div>
+          </div>
+        </div>
 
-        <!-- Footer -->
-        <footer>
-            <h3>আমাদের সাথে যোগাযোগ করুন</h3>
-            <p>📞 মোবাইল: ০১৭১২-৩৪৫৬৭৮, ০১৮১২-৯৮৭৬৫৪</p>
-            <p>📧 ইমেইল: contact@example.com</p>
-            <p>📍 ঠিকানা: ১২৩ নম্বর রোড, ধানমন্ডি, ঢাকা-১২০৫</p>
-            <p>🌐 ওয়েবসাইট: www.example.com</p>
-            <p style="margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 20px;">
-                © ২০২৬ সর্বস্বত্ব সংরক্ষিত | গুণগত মানের সর্বচ্চ নিশ্চয়তা
-            </p>
-        </footer>
+        <!-- Product Card 3 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+          <div class="relative overflow-hidden">
+            <div class="h-60 bg-gradient-to-br from-yellow-500 to-amber-700 flex items-center justify-center">
+              <i class="fas fa-honey-pot text-white text-7xl"></i>
+            </div>
+            <div class="absolute top-4 right-4">
+              <span class="bg-amber-500 text-white px-3 py-1 rounded-full text-xs font-bold">পপুলার</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex justify-between items-start mb-3">
+              <h3 class="text-2xl font-bold text-gray-800">সুন্দরবনের মধু</h3>
+              <span class="text-lg font-bold text-indigo-600">৯০০৳/কেজি</span>
+            </div>
+            <p class="text-gray-600 mb-4">সুন্দরবনের মধু সংগ্রহকারীদের কাছ থেকে সরাসরি সংগ্রহ করা খাঁটি মধু। কোন সংযোজন বা চিনি মেশানো নেই।</p>
+            <div class="flex justify-between items-center">
+              <span class="inline-block bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-semibold">
+                <i class="fas fa-star mr-1"></i> প্রিমিয়াম কোয়ালিটি
+              </span>
+              <button class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full hover:shadow-md transition">
+                <i class="fas fa-shopping-cart mr-2"></i> অর্ডার করুন
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+      <!-- View All Button -->
+      <div class="text-center mt-12">
+        <a href="#" class="inline-flex items-center justify-center bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold px-8 py-3 rounded-full hover:shadow-xl transition">
+          সব পণ্য দেখুন <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="fade-in">
+      <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-10">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold gradient-text mb-4">কেন আমাদের বেছে নেবেন?</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">আমাদের গ্রাহকদের চাহিদা ও বিশ্বাসই আমাদের মূল চালিকাশক্তি। আমরা সর্বদা সৎ ও স্বচ্ছ থেকে সেবা দিয়ে যাচ্ছি।</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white rounded-xl p-6 text-center transition hover:shadow-lg">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-check-double text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-2">১০০% খাঁটি</h3>
+            <p class="text-gray-600">সমস্ত পণ্য ভেজালমুক্ত এবং প্রাকৃতিক উপায়ে উৎপাদিত</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6 text-center transition hover:shadow-lg">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-shipping-fast text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-2">দ্রুত ডেলিভারি</h3>
+            <p class="text-gray-600">অর্ডার করলে ২৪-৪৮ ঘণ্টার মধ্যে ডেলিভারি</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6 text-center transition hover:shadow-lg">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-hand-holding-usd text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-2">যৌক্তিক মূল্য</h3>
+            <p class="text-gray-600">মধ্যস্বত্বভোগী না থাকায় সাশ্রয়ী মূল্য</p>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6 text-center transition hover:shadow-lg">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-headset text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-2">২৪/৭ সাপোর্ট</h3>
+            <p class="text-gray-600">যেকোন সমস্যায় আমাদের সাথে যোগাযোগ করুন</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="fade-in">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold gradient-text mb-4">গ্রাহকদের মতামত</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">আমাদের নিয়মিত গ্রাহকরা যা বলেছেন</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+              র
+            </div>
+            <div>
+              <h4 class="font-bold">রহিমা আক্তার</h4>
+              <p class="text-gray-500 text-sm">ঢাকা</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic">"সুফিয়া মার্ট থেকে নিয়মিত খেজুর কিনি। পণ্যের গুণগত মান এবং ডেলিভারি সিস্টেম দুটোই অসাধারণ।"</p>
+          <div class="flex text-amber-400 mt-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+              ক
+            </div>
+            <div>
+              <h4 class="font-bold">কামরুল হাসান</h4>
+              <p class="text-gray-500 text-sm">চট্টগ্রাম</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic">"বাজারের অন্যান্য তেলের সাথে এদের সরিষার তেলের তুলনা হয় না। সত্যিই খাঁটি এবং স্বাদও আলাদা।"</p>
+          <div class="flex text-amber-400 mt-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-2xl shadow-lg">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
+              স
+            </div>
+            <div>
+              <h4 class="font-bold">সাবরিনা সুলতানা</h4>
+              <p class="text-gray-500 text-sm">সিলেট</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic">"সুন্দরবনের মধু আমার ডায়াবেটিস নিয়ন্ত্রণে সাহায্য করেছে। খাঁটি মধু খুঁজে পেয়েছি এই প্রতিষ্ঠানে।"</p>
+          <div class="flex text-amber-400 mt-3">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="fade-in">
+      <div class="gradient-bg rounded-2xl p-10 text-center text-white">
+        <h2 class="text-3xl font-bold mb-4">সবার আগে নতুন অফার পেতে চান?</h2>
+        <p class="mb-6 max-w-xl mx-auto">আমাদের নিউজলেটারে সাবস্ক্রাইব করুন এবং নতুন পণ্য ও অফার সম্পর্কে সবার আগে জানুন</p>
+        <div class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+          <input type="email" placeholder="আপনার ইমেইল এড্রেস" class="flex-grow px-4 py-3 rounded-full focus:outline-none text-gray-800">
+          <button class="bg-white text-indigo-600 font-bold px-6 py-3 rounded-full hover:bg-gray-100 transition whitespace-nowrap">
+            <i class="fas fa-paper-plane mr-2"></i> সাবস্ক্রাইব করুন
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+              <i class="fas fa-store text-white"></i>
+            </div>
+            <h2 class="text-2xl font-bold">সুফিয়া মার্ট</h2>
+          </div>
+          <p class="text-gray-300">বিশুদ্ধ ও ভেজালমুক্ত পণ্য সরবরাহে আমরা অঙ্গীকারবদ্ধ। স্বাস্থ্যসম্মত জীবনযাপনে আপনার সহযোগী।</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4">দ্রুত লিংক</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-white transition">হোম</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition">পণ্য সমূহ</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition">আমাদের সম্পর্কে</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition">যোগাযোগ</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4">পণ্য ক্যাটাগরি</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-300 hover:text-white transition">খেজুর</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition">তেল</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition">মধু</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition">অন্যান্য পণ্য</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4">যোগাযোগ করুন</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt mr-3 text-indigo-300"></i>
+              <span>০১৭১২-৩৪৫৬৭৮</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-indigo-300"></i>
+              <span>info@sufiamart.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-map-marker-alt mr-3 text-indigo-300"></i>
+              <span>বিজয় নগর, ঢাকা, বাংলাদেশ</span>
+            </li>
+          </ul>
+          <div class="flex space-x-4 mt-4">
+            <a href="#" class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="#" class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-white/20 mt-10 pt-6 text-center">
+        <p>&copy; ২০২৬ সুফিয়া মার্ট। সর্বস্বত্ব সংরক্ষিত।</p>
+        <p class="text-gray-400 text-sm mt-2">ডিজাইন ও ডেভেলপমেন্ট - সুফিয়া মার্ট টেক টিম</p>
+      </div>
     </div>
+  </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+    
+    // Animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    // Observe elements
+    document.querySelectorAll('section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
