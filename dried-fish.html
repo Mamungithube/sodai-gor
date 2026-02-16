@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>শুটকি মাছ | সদাই ঘর</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { font-family: 'Hind Siliguri', sans-serif; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn 0.8s ease forwards; }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #4f46e5, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-slate-50 to-indigo-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white text-lg"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold gradient-text">সদাই ঘর</h1>
+            <p class="text-xs text-gray-500 -mt-1">বিশুদ্ধতার প্রতিশ্রুতি</p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">হোম</a>
+          <a href="index.html#products" class="text-gray-700 hover:text-indigo-600 font-medium transition">পণ্য</a>
+          <a href="index.html#about-us" class="text-gray-700 hover:text-indigo-600 font-medium transition">আমাদের সম্পর্কে</a>
+          <a href="https://wa.me/8801630089610" class="text-gray-700 hover:text-indigo-600 font-medium transition">যোগাযোগ</a>
+          <a href="https://wa.me/8801630089610" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:shadow-lg transition">অর্ডার করুন</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menuBtn" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-2 shadow-lg rounded-lg mt-2">
+        <a href="index.html" class="block py-2 px-4 hover:bg-indigo-50 rounded">হোম</a>
+        <a href="index.html#products" class="block py-2 px-4 hover:bg-indigo-50 rounded">পণ্য</a>
+        <a href="index.html#about-us" class="block py-2 px-4 hover:bg-indigo-50 rounded">আমাদের সম্পর্কে</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 hover:bg-indigo-50 rounded">যোগাযোগ</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 bg-indigo-600 text-white rounded-full text-center mt-2">অর্ডার করুন</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden gradient-bg text-white">
+    <div class="absolute inset-0">
+      <img src="https://images.pexels.com/photos/7432029/pexels-photo-7432029.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="শুটকি মাছ"
+        class="w-full h-full object-cover opacity-20">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
+      <div class="text-center">
+        <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm mb-4">
+          <i class="fas fa-home mr-1"></i>
+          <a href="index.html" class="hover:underline">হোম</a> / শুটকি মাছ
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🐟 শুটকি মাছ (সিদ্ধ ও শুকনো)</h1>
+        <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">কক্সবাজার ও সেন্ট মার্টিনের খাঁটি রৌদ্র শুকানো ঐতিহ্যবাহী শুটকি — প্রোটিনের ভাণ্ডার</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 space-y-16">
+
+    <!-- Price & Order Section -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="gradient-bg p-5 text-white text-center">
+          <p class="font-bold text-xl"><i class="fas fa-tags mr-2"></i>মূল্য তালিকা</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-weight text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">প্রতি কেজি</p>
+            <p class="text-4xl font-bold text-indigo-600 mb-1">-- ৳</p>
+            <p class="text-red-600 text-sm font-semibold"><i class="fas fa-times-circle mr-1"></i>স্টকে নেই</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-truck text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">ডেলিভারি</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">-- ঘণ্টা</p>
+            <p class="text-gray-500 text-sm">স্টক আসলে জানানো হবে</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box-open text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">সর্বনিম্ন অর্ডার</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">-- কেজি</p>
+            <p class="text-gray-500 text-sm">পণ্যটি বর্তমানে স্টকে নেই</p>
+          </div>
+
+        </div>
+        <div class="p-6 bg-indigo-50 text-center">
+          <div class="inline-block bg-gray-400 text-white font-bold px-8 py-3 rounded-full cursor-not-allowed text-lg opacity-70">
+            <i class="fas fa-ban mr-2"></i> বর্তমানে স্টক শেষ
+          </div>
+          <p class="text-gray-600 mt-3">পণ্যটি আবার স্টকে এলে নিচের ফর্মে নোটিফিকেশন পাবেন</p>
+          <div class="max-w-md mx-auto mt-4 flex gap-2">
+            <input type="email" placeholder="আপনার ইমেইল দিন" class="flex-1 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-300">
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition">জানাবেন</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Dried Fish -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-indigo-500">
+        <h2 class="text-3xl font-bold gradient-text mb-5">শুটকি মাছ কী?</h2>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          শুটকি মাছ হলো তাজা মাছকে রোদে শুকিয়ে বা স্মোক করে সংরক্ষণ করা একটি ঐতিহ্যবাহী পদ্ধতি। বাংলাদেশের উপকূলীয় অঞ্চল বিশেষ করে কক্সবাজার, চট্টগ্রাম ও সেন্ট মার্টিন দ্বীপে এই শুটকি তৈরির প্রাচীন সংস্কৃতি রয়েছে।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          শুটকি তৈরির সময় মাছ থেকে পানি বেরিয়ে যায় কিন্তু প্রোটিন, মিনারেল ও ওমেগা-৩ ফ্যাটি অ্যাসিড ঘনীভূত আকারে থেকে যায়। ফলে শুটকি মাছ প্রোটিনের সবচেয়ে ভালো উৎসগুলোর একটি। 
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          আমাদের শুটকি সম্পূর্ণ প্রাকৃতিক পদ্ধতিতে রোদে শুকানো, কোনো কেমিক্যাল বা প্রিজারভেটিভ ছাড়া। লইট্যা, চিংড়ি, ফাইশা, ছুরি, কাচকি সহ বিভিন্ন প্রজাতির শুটকি আমরা সংগ্রহ করে থাকি সরাসরি জেলে ও মৌসুমিদের কাছ থেকে।
+        </p>
+      </div>
+    </section>
+
+    <!-- Types of Dried Fish -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">শুটকি মাছের প্রকারভেদ</h2>
+        <p class="text-gray-500">বাংলাদেশের উপকূলীয় অঞ্চলের ঐতিহ্যবাহী শুটকি</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-fish text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">লইট্যা শুটকি</h3>
+          <p class="text-gray-600 leading-relaxed">সবচেয়ে জনপ্রিয় শুটকি। ছোট আকারের লইট্যা মাছ রোদে শুকিয়ে তৈরি। ঝোল, ভর্তা ও তরকারিতে ব্যবহৃত হয়। ক্যালসিয়াম ও প্রোটিনে ভরপুর।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-fish text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">চিংড়ি শুটকি</h3>
+          <p class="text-gray-600 leading-relaxed">ছোট চিংড়ি রোদে শুকিয়ে তৈরি। সুপ, ভর্তা ও তরকারিতে ব্যবহার হয়। ওমেগা-৩ ও অ্যান্টিঅক্সিডেন্ট সমৃদ্ধ।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-fish text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">ফাইশা শুটকি</h3>
+          <p class="text-gray-600 leading-relaxed">মাঝারি আকারের ফাইশা মাছের শুটকি। তরকারি ও ভুনা খেতে খুব সুস্বাদু। প্রোটিন ও ক্যালসিয়ামের ভালো উৎস।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-fish text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">ছুরি মাছের শুটকি</h3>
+          <p class="text-gray-600 leading-relaxed">ছুরি মাছের শুটকি আকারে বড় এবং মাংস অনেক। কারি ও ভুনায় ব্যবহার হয়। ওমেগা-৩ ফ্যাটি অ্যাসিড সমৃদ্ধ।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-fish text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">কাচকি শুটকি</h3>
+          <p class="text-gray-600 leading-relaxed">অতি ক্ষুদ্র কাচকি মাছের শুটকি। ভর্তা ও ভাজিতে ব্যবহার হয়। ক্যালসিয়ামের সবচেয়ে ভালো উৎস।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-fish text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">পোয়া মাছের শুটকি</h3>
+          <p class="text-gray-600 leading-relaxed">পোয়া মাছের শুটকি আকারে মাঝারি। তরকারি ও ভুনা ছাড়াও ভর্তা তৈরি করা হয়। পুষ্টিগুণে ভরপুর।</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">শুটকি মাছের গুণাগুণ ও উপকারিতা</h2>
+        <p class="text-gray-500">প্রোটিনের ভাণ্ডার — সুস্থ থাকুন প্রাকৃতিক উপায়ে</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-dumbbell text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">উচ্চ প্রোটিন সমৃদ্ধ</h3>
+          <p class="text-gray-600 leading-relaxed">শুটকি মাছে প্রায় ৬০-৭০% প্রোটিন থাকে, যা তাজা মাছের তুলনায় অনেক বেশি। পেশি গঠন, কোষ মেরামত ও শরীরের বৃদ্ধিতে সাহায্য করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-bone text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">ক্যালসিয়ামের ভাণ্ডার</h3>
+          <p class="text-gray-600 leading-relaxed">ছোট মাছের শুটকিতে (কাচকি, লইট্যা) প্রচুর ক্যালসিয়াম থাকে যা হাড় ও দাঁত মজবুত করে। অস্টিওপোরোসিস প্রতিরোধে সহায়ক।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-heartbeat text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">ওমেগা-৩ ফ্যাটি অ্যাসিড</h3>
+          <p class="text-gray-600 leading-relaxed">শুটকি মাছ ওমেগা-৩ ফ্যাটি অ্যাসিড সমৃদ্ধ, যা হৃদযন্ত্র সুস্থ রাখে, রক্তচাপ নিয়ন্ত্রণে রাখে এবং মস্তিষ্কের কার্যকারিতা উন্নত করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-shield-alt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি</h3>
+          <p class="text-gray-600 leading-relaxed">শুটকি মাছে থাকা জিংক, সেলেনিয়াম ও অ্যান্টিঅক্সিডেন্ট শরীরের রোগ প্রতিরোধ ক্ষমতা শক্তিশালী করে এবং বিভিন্ন ইনফেকশন থেকে রক্ষা করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-tint text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">আয়রন সমৃদ্ধ</h3>
+          <p class="text-gray-600 leading-relaxed">শুটকি মাছে প্রচুর আয়রন থাকে যা রক্তস্বল্পতা প্রতিরোধ করে। বিশেষত গর্ভবতী মা ও কিশোরীদের জন্য খুবই উপকারী।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-brain text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">মস্তিষ্কের বিকাশে</h3>
+          <p class="text-gray-600 leading-relaxed">শুটকি মাছে থাকা ডিএইচএ ও ওমেগা-৩ শিশুদের মস্তিষ্কের বিকাশে সাহায্য করে এবং স্মৃতিশক্তি বাড়ায়।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-eye text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">চোখের যত্নে</h3>
+          <p class="text-gray-600 leading-relaxed">শুটকি মাছে থাকা ভিটামিন এ ও ওমেগা-৩ চোখের দৃষ্টিশক্তি ভালো রাখে এবং ছানি পড়া প্রতিরোধ করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-hand-holding-heart text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">থাইরয়েড নিয়ন্ত্রণ</h3>
+          <p class="text-gray-600 leading-relaxed">শুটকি মাছে থাকা আয়োডিন থাইরয়েড গ্রন্থির কার্যকারিতা নিয়ন্ত্রণে সাহায্য করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-weight-scale text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">ওজন নিয়ন্ত্রণে</h3>
+          <p class="text-gray-600 leading-relaxed">উচ্চ প্রোটিন ও কম ফ্যাট থাকায় শুটকি মাছ ওজন কমাতে সাহায্য করে। এটি দীর্ঘক্ষণ পেট ভরা রাখে এবং ক্ষুধা কমায়।</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Nutrition -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="gradient-bg p-4 text-white">
+          <h3 class="font-bold text-lg text-center"><i class="fas fa-chart-bar mr-2"></i>শুটকি মাছের পুষ্টিমান (প্রতি ১০০ গ্রাম)</h3>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-0 divide-x divide-y divide-gray-100">
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৩৫০</div>
+            <div class="text-gray-500 text-sm mt-1">ক্যালরি</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৬৫ গ্রা</div>
+            <div class="text-gray-500 text-sm mt-1">প্রোটিন</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৮ গ্রা</div>
+            <div class="text-gray-500 text-sm mt-1">চর্বি</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২০০০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ক্যালসিয়াম</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">১৫ mg</div>
+            <div class="text-gray-500 text-sm mt-1">আয়রন</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">১০০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ম্যাগনেশিয়াম</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৫০০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ফসফরাস</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৫ mg</div>
+            <div class="text-gray-500 text-sm mt-1">জিংক</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২৫০০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ওমেগা-৩</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২০০ IU</div>
+            <div class="text-gray-500 text-sm mt-1">ভিটামিন এ</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২.৫ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ভিটামিন বি১২</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">১৫০ mcg</div>
+            <div class="text-gray-500 text-sm mt-1">আয়োডিন</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- কেন আমাদের থেকে নেবেন (যখন স্টকে থাকবে) -->
+    <section class="fade-in">
+      <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-10">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold gradient-text mb-2">কেন সদাই ঘর থেকে নেবেন?</h2>
+          <p class="text-gray-500">আমাদের শুটকি মাছ কেনার ৬টি কারণ (যখন স্টকে আসবে)</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-check-double text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">১০০% খাঁটি ও ভেজালমুক্ত</h3>
+            <p class="text-gray-600 text-sm">কোনো কেমিক্যাল, প্রিজারভেটিভ বা কালার ছাড়া সম্পূর্ণ প্রাকৃতিক রোদে শুকানো শুটকি।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-sun text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">রৌদ্র শুকানো</h3>
+            <p class="text-gray-600 text-sm">কক্সবাজার ও সেন্ট মার্টিনের খোলা রোদে প্রাকৃতিকভাবে শুকানো হয়, যা পুষ্টিগুণ ধরে রাখে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-fish text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সরাসরি জেলেদের কাছ থেকে</h3>
+            <p class="text-gray-600 text-sm">কক্সবাজারের জেলে ও মৌসুমিদের কাছ থেকে সরাসরি সংগ্রহ করি, মধ্যস্বত্বভোগী নেই।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-truck text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">তাজা সরবরাহ</h3>
+            <p class="text-gray-600 text-sm">মৌসুমি সময়ে সংগৃহীত, ঠাণ্ডা পরিবেশে সংরক্ষিত এবং দ্রুত ডেলিভারি।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">নিরাপদ প্যাকেজিং</h3>
+            <p class="text-gray-600 text-sm">ভ্যাকুয়াম সিল প্যাকেটে দেওয়া হয়, যা শুটকির তাজাত্ব ও গন্ধ ধরে রাখে এবং পোকা থেকে রক্ষা করে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-headset text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সার্বক্ষণিক সাপোর্ট</h3>
+            <p class="text-gray-600 text-sm">যেকোনো প্রশ্নে WhatsApp এ আমাদের সাথে যোগাযোগ করতে পারেন।</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ব্যবহারের নিয়ম ও টিপস -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-3xl font-bold gradient-text mb-6 text-center">শুটকি মাছ ব্যবহারের উপায় ও টিপস</h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-water text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">শুটকি পরিষ্কার পদ্ধতি</p>
+              <p class="text-gray-600 text-sm">শুটকি মাছ প্রথমে গরম পানি দিয়ে ধুয়ে নিন। তারপর ১৫-২০ মিনিট পানিতে ভিজিয়ে রাখুন। ভেজানো পানি ফেলে দিন। এতে ময়লা ও অতিরিক্ত লবণ দূর হবে।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-fire text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">শুটকি ভাজি</p>
+              <p class="text-gray-600 text-sm">পরিষ্কার করা শুটকি সামান্য হলুদ মাখিয়ে তেলে ভাজি করে খেতে পারেন। খাস্তা ও মজাদার হয়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-mortar-pestle text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">শুটকির ভর্তা</p>
+              <p class="text-gray-600 text-sm">শুটকি ভেজে বা পুড়িয়ে, শুকনা মরিচ, পেঁয়াজ, রসুন দিয়ে বেটে ভর্তা তৈরি করুন। ভাতের সাথে অতুলনীয়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-utensils text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">শুটকির তরকারি</p>
+              <p class="text-gray-600 text-sm">পরিষ্কার শুটকি আলু, বেগুন বা সবজি দিয়ে রান্না করুন। মসলা দিয়ে ঝোল বা শুকনা তরকারি তৈরি করতে পারেন।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-temperature-high text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">শুটকি সংরক্ষণ</p>
+              <p class="text-gray-600 text-sm">শুটকি বায়ুরোধী পাত্রে রেখে ফ্রিজে রাখুন। ব্যবহারের আগে বের করে স্বাভাবিক তাপমাত্রায় আনুন।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-child text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">শিশুদের জন্য</p>
+              <p class="text-gray-600 text-sm">শুটকির গুঁড়ো করে ভাত বা খিচুড়ির সাথে মিশিয়ে শিশুদের খাওয়াতে পারেন। পুষ্টির চাহিদা পূরণে সাহায্য করে।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notify when available -->
+    <section class="fade-in">
+      <div class="gradient-bg rounded-2xl p-10 text-center text-white relative overflow-hidden">
+        <div class="relative">
+          <h2 class="text-3xl font-bold mb-2">🐟 শুটকি মাছ আবার স্টকে আসছে!</h2>
+          <p class="text-2xl font-bold mb-2 mt-3">শীঘ্রই পাওয়া যাবে</p>
+          <p class="mb-6 opacity-90 max-w-2xl mx-auto">বর্তমানে স্টক শেষ। নিচে আপনার ইমেইল দিন, পণ্যটি স্টকে এলে আমরা আপনাকে জানিয়ে দেব।</p>
+          
+          <div class="max-w-md mx-auto mt-4 flex flex-col sm:flex-row gap-2">
+            <input type="email" placeholder="আপনার ইমেইল দিন" class="flex-1 px-4 py-3 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white">
+            <button class="bg-white text-indigo-600 font-bold px-6 py-3 rounded-full hover:shadow-xl transition">
+              <i class="fas fa-bell mr-2"></i> জানাবেন
+            </button>
+          </div>
+          
+          <div class="flex flex-wrap gap-4 justify-center mt-8">
+            <a href="index.html"
+              class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white/10 transition">
+              <i class="fas fa-arrow-left mr-2"></i> হোমে ফিরুন
+            </a>
+            <a href="https://wa.me/8801630089610?text=শুটকি মাছ কখন স্টকে আসবে জানতে চাই"
+              class="bg-white text-indigo-600 font-bold px-8 py-3 rounded-full hover:shadow-xl transition">
+              <i class="fab fa-whatsapp mr-2"></i> WhatsApp এ জানতে চাই
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white"></i>
+          </div>
+          <h2 class="text-2xl font-bold">সদাই ঘর</h2>
+        </div>
+        <p class="text-gray-300 mb-4">বিশুদ্ধ ও ভেজালমুক্ত পণ্য সরবরাহে আমরা অঙ্গীকারবদ্ধ।</p>
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="https://www.facebook.com/profile.php?id=61587291001067"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/8801630089610"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="border-t border-white/20 pt-4">
+          <p>&copy; ২০২৬ সদাই ঘর। সর্বস্বত্ব সংরক্ষিত।</p>
+          <p class="text-gray-400 text-sm mt-1">ডিজাইন ও ডেভেলপমেন্ট - Wisetech Agency - (Mamun)</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', (event) => {
+      if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>সুন্দরবনের মধু | সদাই ঘর</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { font-family: 'Hind Siliguri', sans-serif; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn 0.8s ease forwards; }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #4f46e5, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-slate-50 to-indigo-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white text-lg"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold gradient-text">সদাই ঘর</h1>
+            <p class="text-xs text-gray-500 -mt-1">বিশুদ্ধতার প্রতিশ্রুতি</p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">হোম</a>
+          <a href="index.html#products" class="text-gray-700 hover:text-indigo-600 font-medium transition">পণ্য</a>
+          <a href="index.html#about-us" class="text-gray-700 hover:text-indigo-600 font-medium transition">আমাদের সম্পর্কে</a>
+          <a href="https://wa.me/8801630089610" class="text-gray-700 hover:text-indigo-600 font-medium transition">যোগাযোগ</a>
+          <a href="https://wa.me/8801630089610" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:shadow-lg transition">অর্ডার করুন</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menuBtn" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-2 shadow-lg rounded-lg mt-2">
+        <a href="index.html" class="block py-2 px-4 hover:bg-indigo-50 rounded">হোম</a>
+        <a href="index.html#products" class="block py-2 px-4 hover:bg-indigo-50 rounded">পণ্য</a>
+        <a href="index.html#about-us" class="block py-2 px-4 hover:bg-indigo-50 rounded">আমাদের সম্পর্কে</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 hover:bg-indigo-50 rounded">যোগাযোগ</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 bg-indigo-600 text-white rounded-full text-center mt-2">অর্ডার করুন</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden gradient-bg text-white">
+    <div class="absolute inset-0">
+      <img src="https://images.pexels.com/photos/5827966/pexels-photo-5827966.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="সুন্দরবনের মধু"
+        class="w-full h-full object-cover opacity-20">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
+      <div class="text-center">
+        <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm mb-4">
+          <i class="fas fa-home mr-1"></i>
+          <a href="index.html" class="hover:underline">হোম</a> / সুন্দরবনের মধু
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🍯 সুন্দরবনের মধু</h1>
+        <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">বাংলার প্রকৃতির অমৃত — সুন্দরবনের খাঁটি মধু, মহাঔষধি গুণে সমৃদ্ধ</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 space-y-16">
+
+    <!-- Price & Order Section -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="gradient-bg p-5 text-white text-center">
+          <p class="font-bold text-xl"><i class="fas fa-tags mr-2"></i>মূল্য তালিকা</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-weight text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">প্রতি কেজি</p>
+            <p class="text-4xl font-bold text-indigo-600 mb-1">১০০০৳</p>
+            <p class="text-red-600 text-sm font-semibold"><i class="fas fa-check-circle mr-1"></i>স্টকে নেই</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-truck text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">ডেলিভারি</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">২৪-৪৮ ঘণ্টা</p>
+            <p class="text-gray-500 text-sm">সারা বাংলাদেশে</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box-open text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">সর্বনিম্ন অর্ডার</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">২৫০ গ্রাম</p>
+            <p class="text-gray-500 text-sm">পাইকারি অর্ডারে ছাড়</p>
+          </div>
+
+        </div>
+        <div class="p-6 bg-indigo-50 text-center">
+          <a href="https://wa.me/8801630089610?text=সুন্দরবনের মধু অর্ডার করতে চাই, প্রতি কেজি ১০০০ টাকা"
+            class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold px-8 py-3 rounded-full hover:shadow-lg transition text-lg">
+            <i class="fab fa-whatsapp mr-2"></i> এখনই অর্ডার করুন
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Sundarban Honey -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-indigo-500">
+        <h2 class="text-3xl font-bold gradient-text mb-5">সুন্দরবনের মধু কী?</h2>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          সুন্দরবনের মধু হলো বিশ্বের বৃহত্তম ম্যানগ্রোভ বন সুন্দরবনের মৌমাছি সংগৃহীত প্রাকৃতিক মধু। মার্চ থেকে জুন মাস পর্যন্ত সুন্দরবনে খলিশা, গরান, কেওড়া, গেওয়া, সুন্দরী, বাইন সহ নানা প্রজাতির ফুল ফোটে। এই ফুলের নির্যাস থেকে মৌমাছি যে মধু সংগ্রহ করে তাই সুন্দরবনের মধু নামে পরিচিত [citation:3]।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          এই মধুর বিশেষত্ব হলো এটি মিশ্র ফুলের মধু। অর্থাৎ একটি চাকে বিভিন্ন ফুলের রস মিশ্রিত থাকে। এর কারণ সুন্দরবনে একই সময়ে বিভিন্ন প্রজাতির ফুল ফোটে এবং মৌমাছি সব ফুল থেকেই রস সংগ্রহ করে। ফলে এই মধুতে একাধিক ফুলের পুষ্টিগুণ ও ঔষধি গুণাগুণ বিদ্যমান থাকে [citation:3]।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          সুন্দরবনের লবণাক্ত জঙ্গলভূমির বিশেষ পরিবেশ এবং বৈচিত্র্যময় উদ্ভিদের জন্য এখানকার মধু দেশের অন্যতম সেরা প্রাকৃতিক সম্পদ হিসেবে বিবেচিত। স্বাদ, ঘ্রাণ ও পুষ্টিগুণের দিক থেকে এটি অন্যান্য অঞ্চলের মধুর তুলনায় অনেক বেশি সমৃদ্ধ [citation:1]।
+        </p>
+      </div>
+    </section>
+
+    <!-- ফুল ভেদে মধুর প্রকারভেদ ও গুণাগুণ -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">ফুল ভেদে মধুর প্রকারভেদ ও গুণাগুণ</h2>
+        <p class="text-gray-500">সুন্দরবনের বিভিন্ন ফুল থেকে সংগৃহীত মধুর আলাদা আলাদা বৈশিষ্ট্য [citation:1]</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-leaf text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">🌼 কেওড়া ফুলের মধু</h3>
+          <p class="text-gray-600 leading-relaxed">অত্যন্ত ঔষধি গুণসম্পন্ন। জলীয় অংশ বেশি থাকায় অন্যান্য মধুর তুলনায় পাতলা। রঙ কিছুটা হলদে, ঝাঁকি দিলে ফেনা হয়। খেতে কিছুটা টক টক লাগে [citation:1]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-leaf text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">🌱 খলসি ফুলের মধু</h3>
+          <p class="text-gray-600 leading-relaxed">হালকা, স্বচ্ছ ও মোলায়েম। সুগন্ধি মিষ্টি এবং হজমে আরাম দেয়। শিশু থেকে বয়স্ক সবাই সহজেই খেতে পারে। সর্দি-কাশি ও গলার অসুবিধা কমাতে কার্যকর [citation:1]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-leaf text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">🌳 গরান ফুলের মধু</h3>
+          <p class="text-gray-600 leading-relaxed">রঙে গাঢ়, স্বাদে সামান্য তেতো-মিষ্টি, বিশেষ বনজ ঘ্রাণ। অ্যান্টিঅক্সিডেন্টে সমৃদ্ধ, শরীরের টক্সিন দূর করে, রক্ত পরিশোধন করে ও চর্মরোগে উপকারী [citation:1]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-leaf text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">🌿 গেওয়া গাছের মধু</h3>
+          <p class="text-gray-600 leading-relaxed">হালকা অ্যাম্বার রঙের, ঘ্রাণে গভীর। অ্যান্টিব্যাকটেরিয়াল গুণসম্পন্ন, গলা ব্যথা, কাশি, কফের সমস্যা কমায়। হজমশক্তি ও রোগ প্রতিরোধ ক্ষমতা উন্নত করে [citation:1]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-leaf text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">🌴 সুন্দরী গাছের মধু</h3>
+          <p class="text-gray-600 leading-relaxed">গাঢ় সোনালি রঙের, স্বাদে সমৃদ্ধ। শরীরের টক্সিন দূর করে লিভার সুস্থ রাখে। রক্ত সঞ্চালন ঠিক রাখে ও শারীরিক ক্লান্তি দূর করে [citation:1]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-leaf text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">🍯 মিশ্র ফুলের মধু</h3>
+          <p class="text-gray-600 leading-relaxed">আমাদের সংগৃহীত মধু মূলত মিশ্র ফুলের, যা খলিশা, গরান, কেওড়া, বাইন সহ বিভিন্ন ফুলের সংমিশ্রণ। এতে সব ফুলের গুণাগুণ পাওয়া যায় [citation:3]।</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">সুন্দরবনের মধুর গুণাগুণ ও উপকারিতা</h2>
+        <p class="text-gray-500">প্রকৃতির দেওয়া মহৌষধ — সুস্থ থাকুন প্রাকৃতিক উপায়ে</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-shield-alt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি</h3>
+          <p class="text-gray-600 leading-relaxed">সুন্দরবনের মধুতে থাকা অ্যান্টিঅক্সিডেন্ট, অ্যামিনো অ্যাসিড, ভিটামিন ও খনিজ উপাদান শরীরের রোগ প্রতিরোধ ক্ষমতা শক্তিশালী করে এবং বিভিন্ন জীবাণু ও ব্যাকটেরিয়া দূর করে [citation:2][citation:3]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-lungs text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">সর্দি-কাশি ও গলা ব্যথা</h3>
+          <p class="text-gray-600 leading-relaxed">প্রাকৃতিক অ্যান্টিবায়োটিক হিসেবে কাজ করে। খলিশা ও গরান ফুলের মধু শ্বাসকষ্ট, কাশি এবং গলা ব্যথায় জাদুর মতো কাজ করে [citation:2]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-stomach text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">হজমশক্তি বৃদ্ধি</h3>
+          <p class="text-gray-600 leading-relaxed">মধুতে থাকা প্রাকৃতিক এনজাইম হজম প্রক্রিয়া উন্নত করে। নিয়মিত সেবনে কোষ্ঠকাঠিন্য দূর হয়, গ্যাস্ট্রিক নিয়ন্ত্রণে থাকে এবং পরিপাকতন্ত্র সুস্থ থাকে [citation:2][citation:3][citation:5]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-heartbeat text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">রক্ত চলাচল উন্নত করে</h3>
+          <p class="text-gray-600 leading-relaxed">মধু দেহের স্বাভাবিক রক্ত চলাচলের জন্য প্রয়োজনীয় উপাদান সরবরাহ করে। এটি উচ্চ রক্তচাপ নিয়ন্ত্রণে সাহায্য করে এবং শরীরকে তরতাজা রাখে [citation:3][citation:5]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-tint text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">রক্তশূন্যতা প্রতিরোধ</h3>
+          <p class="text-gray-600 leading-relaxed">মধুতে থাকা কপার, লৌহ ও ম্যাঙ্গানিজ রক্তের হিমোগ্লোবিন গঠনে সহায়তা করে। ফলে রক্তশূন্যতায় এটি বেশ ফলদায়ক [citation:4]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-spa text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">ত্বকের যত্নে</h3>
+          <p class="text-gray-600 leading-relaxed">মধু প্রাকৃতিক রূপচর্চার উপাদান। ত্বকের ময়লা, মৃত কোষ ও কালো দাগ দূর করে। গরান মধু চর্মরোগে প্রাকৃতিক প্রতিষেধকের মতো কাজ করে [citation:1][citation:3]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-bolt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">তাৎক্ষণিক শক্তি যোগায়</h3>
+          <p class="text-gray-600 leading-relaxed">মধু গ্লুকোজ ও ফ্রুক্টোজের প্রাকৃতিক উৎস। এটি ক্লান্তি দূর করে শরীরে দ্রুত শক্তি যোগাতে সাহায্য করে [citation:2]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-liver text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">লিভারের যত্নে</h3>
+          <p class="text-gray-600 leading-relaxed">সুন্দরী গাছের মধু শরীরের টক্সিন দূর করে লিভারকে সুস্থ রাখতে সাহায্য করে। নিয়মিত সেবনে লিভারের কার্যকারিতা উন্নত হয় [citation:1]।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-brain text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">যৌন স্বাস্থ্যে</h3>
+          <p class="text-gray-600 leading-relaxed">সুন্দরবনের মধুতে থাকা প্রয়োজনীয় খনিজ, ভিটামিন ও পুষ্টি উপাদান দেহের যৌন স্বাস্থ্যের যত্ন নেয় এবং তা সাবলীল রাখে [citation:3]।</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- বৈশিষ্ট্য ও চেনার উপায় -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="gradient-bg p-4 text-white">
+          <h3 class="font-bold text-lg text-center"><i class="fas fa-search mr-2"></i>খাঁটি সুন্দরবনের মধু চেনার উপায় ও বৈশিষ্ট্য</h3>
+        </div>
+        <div class="p-8">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div class="flex items-start gap-3">
+              <div class="gradient-bg w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fas fa-check text-white text-sm"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">ঘনত্ব</p>
+                <p class="text-gray-600">সুন্দরবনের মধু কখনোই ঘন হয় না। আবহাওয়াগত কারণে এটি সবসময় পাতলা থাকে। হাতের আঙুলে নিলে পানির মত পিছলে পরে যায় [citation:3][citation:5]।</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="gradient-bg w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fas fa-check text-white text-sm"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">ফেনা সৃষ্টি</p>
+                <p class="text-gray-600">ঝাঁকি দিলে দুধের মত সাদা ফেনা হয় এবং গ্যাস সৃষ্টি হয়। স্থির রাখলে আবার আগের অবস্থায় ফিরে যায় [citation:3]।</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="gradient-bg w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fas fa-check text-white text-sm"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">রঙ</p>
+                <p class="text-gray-600">সবসময় অ্যাম্বার রঙের হয় (লাইট, ডার্ক বা হালকা ডার্ক)। মৌসুমের শুরুতে সাদাটে, পরে লালচে বা হালকা বাদামি হয় [citation:3][citation:5]।</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="gradient-bg w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fas fa-check text-white text-sm"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">ঘ্রাণ ও স্বাদ</p>
+                <p class="text-gray-600">বুনো ফুলের সুঘ্রাণ। স্বাদ হালকা টক-মিষ্টি (কেওড়া ফুলের জন্য), কিছুটা ঝাঁঝালো অনুভূতি [citation:1][citation:5]।</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="gradient-bg w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fas fa-check text-white text-sm"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">পোলেন স্তর</p>
+                <p class="text-gray-600">উপরে প্রোটিনযুক্ত পোলেনের পাতলা স্তর (গাদ) দেখা যায়, যা চাক কাটা খাঁটি মধুর লক্ষণ [citation:3][citation:5]।</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="gradient-bg w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                <i class="fas fa-check text-white text-sm"></i>
+              </div>
+              <div>
+                <p class="font-semibold text-gray-800">আর্দ্রতা</p>
+                <p class="text-gray-600">সমুদ্রের কাছাকাছি এলাকা হওয়ায় বাতাসে জলীয় বাষ্প বেশি, তাই মধুতে আর্দ্রতা বেশি ও পাতলা হয় [citation:3]।</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- কেন আমাদের থেকে নেবেন -->
+    <section class="fade-in">
+      <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-10">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold gradient-text mb-2">কেন সদাই ঘর থেকে নেবেন?</h2>
+          <p class="text-gray-500">আমাদের সুন্দরবনের মধু কেনার ৬টি কারণ</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-check-double text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">১০০% খাঁটি ও ভেজালমুক্ত</h3>
+            <p class="text-gray-600 text-sm">সুন্দরবনের প্রকৃত মৌয়ালদের কাছ থেকে সংগ্রহ করা, কোনো ধরনের চিনি বা সিরাপ মেশানো নেই [citation:3]।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-hand-holding-usd text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সাশ্রয়ী মূল্য</h3>
+            <p class="text-gray-600 text-sm">বাজারে সুন্দরবনের মধু ১২০০-১৪৫০ টাকা কেজি দরে বিক্রি হয় [citation:4][citation:5]। আমরা দিচ্ছি মাত্র ১০০০ টাকায়।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-tree text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সরাসরি সুন্দরবন থেকে</h3>
+            <p class="text-gray-600 text-sm">সুন্দরবন সংলগ্ন এলাকা থেকে সরাসরি সংগ্রহ করি, মধ্যস্বত্বভোগী নেই।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-shipping-fast text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">দ্রুত ডেলিভারি</h3>
+            <p class="text-gray-600 text-sm">অর্ডার করলে ২৪-৪৮ ঘণ্টার মধ্যে আপনার বাড়িতে পৌঁছে দেওয়া হবে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">নিরাপদ প্যাকেজিং</h3>
+            <p class="text-gray-600 text-sm">ফুড-গ্রেড কাচের বোতলে দেওয়া হয়, যা মধুর মান ও তাজাত্ব বজায় রাখে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-headset text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সার্বক্ষণিক সাপোর্ট</h3>
+            <p class="text-gray-600 text-sm">যেকোনো সমস্যা বা প্রশ্নে আমরা সর্বদা আপনার পাশে আছি। WhatsApp এ যোগাযোগ করুন।</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ব্যবহারের নিয়ম ও টিপস -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-3xl font-bold gradient-text mb-6 text-center">সুন্দরবনের মধু ব্যবহারের উপায় ও টিপস</h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-mug-hot text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">সকালে খালি পেটে</p>
+              <p class="text-gray-600 text-sm">১ চা-চামচ মধু কুসুম গরম পানির সাথে মিশিয়ে সকালে খেলে হজমশক্তি বাড়ে, গ্যাস্ট্রিক নিয়ন্ত্রণে থাকে এবং কোষ্ঠকাঠিন্য দূর হয় [citation:4]।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-lungs text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">সর্দি-কাশিতে</p>
+              <p class="text-gray-600 text-sm">মধুর সাথে আদা ও কালিজিরা মিশিয়ে খেলে শ্বাসকষ্ট, কাশি ও গলা ব্যথায় আরাম পাওয়া যায় [citation:4]।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-lemon text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">লেবু-মধু শরবত</p>
+              <p class="text-gray-600 text-sm">১ গ্লাস পানিতে লেবুর রস ও ১ চামচ মধু মিশিয়ে পান করুন। শরীর ঠান্ডা রাখে, ত্বক উজ্জ্বল করে।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-bread-slice text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">রুটির সাথে</p>
+              <p class="text-gray-600 text-sm">সকালের নাস্তায় রুটি বা পরোটার সাথে মধু খেতে পারেন। চিনির চেয়ে অনেক স্বাস্থ্যকর।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-spa text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">ফেস প্যাক</p>
+              <p class="text-gray-600 text-sm">মধুর সাথে বেসন বা দই মিশিয়ে ফেস প্যাক বানিয়ে লাগান। ত্বকের দাগ দূর করে ও উজ্জ্বলতা বাড়ায় [citation:3]।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-thermometer-half text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">সংরক্ষণ পদ্ধতি</p>
+              <p class="text-gray-600 text-sm">কাচের বোতলে রেখে ঠাণ্ডা ও শুষ্ক স্থানে রাখুন। রোদ এড়িয়ে চলুন। ফ্রিজে না রাখাই ভালো।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ইসলামিক দৃষ্টিকোণ থেকে মধু -->
+    <section class="fade-in">
+      <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-8">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="md:w-1/3 text-center">
+            <div class="gradient-bg w-24 h-24 rounded-full flex items-center justify-center mx-auto">
+              <i class="fas fa-quran text-white text-4xl"></i>
+            </div>
+          </div>
+          <div class="md:w-2/3">
+            <h3 class="text-2xl font-bold gradient-text mb-3">ইসলামিক দৃষ্টিকোণ থেকে মধু</h3>
+            <p class="text-gray-700 leading-relaxed mb-2">
+              পবিত্র কুরআনে মধুর উপকারিতা সম্পর্কে বলা হয়েছে:
+            </p>
+            <p class="text-gray-800 font-semibold italic mb-2">
+              "তার পেট থেকে বিভিন্ন রঙের পানীয় নির্গত হয়। তাতে মানুষের জন্য রয়েছে রোগের প্রতিকার। নিশ্চয় এতে চিন্তাশীল সম্প্রদায়ের জন্য নিদর্শন রয়েছে।"
+            </p>
+            <p class="text-gray-600">— সূরা আন-নাহল (১৬), আয়াত: ৬৮-৬৯ [citation:4]</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="fade-in">
+      <div class="gradient-bg rounded-2xl p-10 text-center text-white relative overflow-hidden">
+        <div class="relative">
+          <h2 class="text-3xl font-bold mb-2">🍯 সুন্দরবনের মধু অর্ডার করুন</h2>
+          <p class="text-4xl font-bold mb-2 mt-3">মাত্র ১০০০৳/কেজি</p>
+          <p class="mb-6 opacity-90">বাজারে যেখানে ১৪৫০ টাকা, সেখানে আমরা দিচ্ছি মাত্র ১০০০ টাকায় [citation:4]</p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="https://wa.me/8801630089610?text=সুন্দরবনের মধু অর্ডার করতে চাই, প্রতি কেজি ১০০০ টাকা"
+              class="bg-white text-indigo-600 font-bold px-8 py-3 rounded-full hover:shadow-xl transition text-lg">
+              <i class="fab fa-whatsapp mr-2"></i> WhatsApp এ অর্ডার করুন
+            </a>
+            <a href="index.html"
+              class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white/10 transition">
+              <i class="fas fa-arrow-left mr-2"></i> হোমে ফিরুন
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white"></i>
+          </div>
+          <h2 class="text-2xl font-bold">সদাই ঘর</h2>
+        </div>
+        <p class="text-gray-300 mb-4">বিশুদ্ধ ও ভেজালমুক্ত পণ্য সরবরাহে আমরা অঙ্গীকারবদ্ধ।</p>
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="https://www.facebook.com/profile.php?id=61587291001067"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/8801630089610"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="border-t border-white/20 pt-4">
+          <p>&copy; ২০২৬ সদাই ঘর। সর্বস্বত্ব সংরক্ষিত।</p>
+          <p class="text-gray-400 text-sm mt-1">ডিজাইন ও ডেভেলপমেন্ট - Wisetech Agency - (Mamun)</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', (event) => {
+      if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

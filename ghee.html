@@ -1,0 +1,612 @@
+ghee.html
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>বিশুদ্ধ গাওয়া ঘি | সদাই ঘর</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { font-family: 'Hind Siliguri', sans-serif; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn 0.8s ease forwards; }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #4f46e5, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-slate-50 to-indigo-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white text-lg"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold gradient-text">সদাই ঘর</h1>
+            <p class="text-xs text-gray-500 -mt-1">বিশুদ্ধতার প্রতিশ্রুতি</p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">হোম</a>
+          <a href="index.html#products" class="text-gray-700 hover:text-indigo-600 font-medium transition">পণ্য</a>
+          <a href="index.html#about-us" class="text-gray-700 hover:text-indigo-600 font-medium transition">আমাদের সম্পর্কে</a>
+          <a href="https://wa.me/8801630089610" class="text-gray-700 hover:text-indigo-600 font-medium transition">যোগাযোগ</a>
+          <a href="https://wa.me/8801630089610" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:shadow-lg transition">অর্ডার করুন</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menuBtn" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-2 shadow-lg rounded-lg mt-2">
+        <a href="index.html" class="block py-2 px-4 hover:bg-indigo-50 rounded">হোম</a>
+        <a href="index.html#products" class="block py-2 px-4 hover:bg-indigo-50 rounded">পণ্য</a>
+        <a href="index.html#about-us" class="block py-2 px-4 hover:bg-indigo-50 rounded">আমাদের সম্পর্কে</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 hover:bg-indigo-50 rounded">যোগাযোগ</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 bg-indigo-600 text-white rounded-full text-center mt-2">অর্ডার করুন</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden gradient-bg text-white">
+    <div class="absolute inset-0">
+      <img src="https://images.pexels.com/photos/4120402/pexels-photo-4120402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="বিশুদ্ধ গাওয়া ঘি"
+        class="w-full h-full object-cover opacity-20">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
+      <div class="text-center">
+        <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm mb-4">
+          <i class="fas fa-home mr-1"></i>
+          <a href="index.html" class="hover:underline">হোম</a> / বিশুদ্ধ গাওয়া ঘি
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🧈 বিশুদ্ধ গাওয়া ঘি</h1>
+        <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">দেশীয় গাভীর খাঁটি দুধ থেকে তৈরি — আয়ুর্বেদিক মহৌষধ, পুষ্টির ভাণ্ডার</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 space-y-16">
+
+    <!-- Price & Order Section -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="gradient-bg p-5 text-white text-center">
+          <p class="font-bold text-xl"><i class="fas fa-tags mr-2"></i>মূল্য তালিকা</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-weight text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">প্রতি কেজি</p>
+            <p class="text-4xl font-bold text-indigo-600 mb-1">-- ৳</p>
+            <p class="text-red-600 text-sm font-semibold"><i class="fas fa-times-circle mr-1"></i>স্টকে নেই</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-truck text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">ডেলিভারি</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">-- ঘণ্টা</p>
+            <p class="text-gray-500 text-sm">স্টক আসলে জানানো হবে</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box-open text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">সর্বনিম্ন অর্ডার</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">-- কেজি</p>
+            <p class="text-gray-500 text-sm">পণ্যটি বর্তমানে স্টকে নেই</p>
+          </div>
+
+        </div>
+        <div class="p-6 bg-indigo-50 text-center">
+          <div class="inline-block bg-gray-400 text-white font-bold px-8 py-3 rounded-full cursor-not-allowed text-lg opacity-70">
+            <i class="fas fa-ban mr-2"></i> বর্তমানে স্টক শেষ
+          </div>
+          <p class="text-gray-600 mt-3">পণ্যটি আবার স্টকে এলে নিচের ফর্মে নোটিফিকেশন পাবেন</p>
+          <div class="max-w-md mx-auto mt-4 flex gap-2">
+            <input type="email" placeholder="আপনার ইমেইল দিন" class="flex-1 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-300">
+            <button class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition">জানাবেন</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Ghee -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-indigo-500">
+        <h2 class="text-3xl font-bold gradient-text mb-5">বিশুদ্ধ গাওয়া ঘি কী?</h2>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          গাওয়া ঘি হলো দেশীয় গাভীর খাঁটি দুধ থেকে তৈরি বিশুদ্ধ ঘি। এটি তৈরি করা হয় দই, মাখন ও তারপর ধীরে ধীরে গরম করে ঘিয়ে রূপান্তরের মাধ্যমে। এই প্রক্রিয়ায় দুধের সমস্ত পুষ্টিগুণ ঘনীভূত আকারে ঘিয়ে সংরক্ষিত হয়।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          বাজারে অধিকাংশ ঘিই ভেজাল। ডালডা, স্টার্চ, প্রিজারভেটিভ ও কেমিক্যাল মিশিয়ে নকল ঘি তৈরি করা হয়। আমাদের গাওয়া ঘি সম্পূর্ণ ভেজালমুক্ত, বিশুদ্ধ দেশীয় গাভীর দুধ থেকে তৈরি এবং হাতের তৈরি ঐতিহ্যবাহী পদ্ধতিতে প্রস্তুত।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          আয়ুর্বেদ শাস্ত্রে গাওয়া ঘিকে মহৌষধ হিসেবে বর্ণনা করা হয়েছে। এটি শুধু রান্নার স্বাদ বাড়ায় না, বরং নিয়মিত সেবনে শরীর সুস্থ রাখে, রোগ প্রতিরোধ ক্ষমতা বাড়ায় এবং মস্তিষ্কের কার্যকারিতা উন্নত করে।
+        </p>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">গাওয়া ঘির গুণাগুণ ও উপকারিতা</h2>
+        <p class="text-gray-500">প্রকৃতির দেওয়া মহৌষধ — সুস্থ থাকুন প্রাকৃতিক উপায়ে</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-shield-alt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি</h3>
+          <p class="text-gray-600 leading-relaxed">গাওয়া ঘিতে থাকা বিউটিরিক অ্যাসিড ও অ্যান্টিঅক্সিডেন্ট শরীরের রোগ প্রতিরোধ ক্ষমতা শক্তিশালী করে এবং বিভিন্ন সংক্রমণ থেকে রক্ষা করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-brain text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">মস্তিষ্কের কার্যকারিতা উন্নত করে</h3>
+          <p class="text-gray-600 leading-relaxed">গাওয়া ঘিতে থাকা ওমেগা-৩ ফ্যাটি অ্যাসিড ও ডিএইচএ মস্তিষ্কের বিকাশে সাহায্য করে, স্মৃতিশক্তি বাড়ায় এবং মানসিক স্বাস্থ্যের উন্নতি ঘটায়।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-stomach text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">হজমশক্তি বৃদ্ধি</h3>
+          <p class="text-gray-600 leading-relaxed">গাওয়া ঘি হজম প্রক্রিয়া উন্নত করে। এটি পাকস্থলীতে ভালো ব্যাকটেরিয়া বাড়াতে সাহায্য করে এবং গ্যাস্ট্রিক, অ্যাসিডিটির সমস্যা কমায়।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-bone text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">হাড় ও দাঁত মজবুত করে</h3>
+          <p class="text-gray-600 leading-relaxed">গাওয়া ঘিতে থাকা ক্যালসিয়াম ও ভিটামিন কে২ হাড়ের ঘনত্ব বাড়ায়, দাঁত মজবুত করে এবং অস্টিওপোরোসিস প্রতিরোধে সাহায্য করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-spa text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">ত্বকের যত্নে</h3>
+          <p class="text-gray-600 leading-relaxed">গাওয়া ঘিতে থাকা ভিটামিন ই ও অ্যান্টিঅক্সিডেন্ট ত্বক উজ্জ্বল করে, বলিরেখা কমায় এবং ত্বকের আর্দ্রতা ধরে রাখে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-eye text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">চোখের যত্নে</h3>
+          <p class="text-gray-600 leading-relaxed">গাওয়া ঘিতে থাকা ভিটামিন এ চোখের দৃষ্টিশক্তি ভালো রাখে এবং ছানি পড়া প্রতিরোধ করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-heartbeat text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">হৃদযন্ত্র সুরক্ষা</h3>
+          <p class="text-gray-600 leading-relaxed">অন্যের ধারণার বিপরীতে, খাঁটি গাওয়া ঘি ভালো কোলেস্টেরল বাড়ায় এবং খারাপ কোলেস্টেরল কমায়। এটি হৃদরোগের ঝুঁকি হ্রাস করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-bolt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">শক্তি জোগায়</h3>
+          <p class="text-gray-600 leading-relaxed">গাওয়া ঘিতে থাকা মিডিয়াম চেইন ফ্যাটি অ্যাসিড দ্রুত শক্তি সরবরাহ করে এবং শরীরকে সক্রিয় রাখে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-baby text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">গর্ভবতী মা ও শিশুদের জন্য</h3>
+          <p class="text-gray-600 leading-relaxed">গাওয়া ঘি গর্ভবতী মায়ের পুষ্টি চাহিদা পূরণ করে এবং শিশুর মস্তিষ্কের বিকাশে সাহায্য করে। শিশুদের নিয়মিত ঘি খাওয়ালে শারীরিক ও মানসিক বিকাশ ত্বরান্বিত হয়।</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Nutrition -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="gradient-bg p-4 text-white">
+          <h3 class="font-bold text-lg text-center"><i class="fas fa-chart-bar mr-2"></i>বিশুদ্ধ গাওয়া ঘির পুষ্টিমান (প্রতি ১০০ গ্রাম)</h3>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-0 divide-x divide-y divide-gray-100">
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৯০০</div>
+            <div class="text-gray-500 text-sm mt-1">ক্যালরি</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৯৯.৫ গ্রা</div>
+            <div class="text-gray-500 text-sm mt-1">মোট ফ্যাট</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৬০%</div>
+            <div class="text-gray-500 text-sm mt-1">স্যাচুরেটেড ফ্যাট</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২৫%</div>
+            <div class="text-gray-500 text-sm mt-1">মনোস্যাচুরেটেড ফ্যাট</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৫%</div>
+            <div class="text-gray-500 text-sm mt-1">পলিআনস্যাচুরেটেড ফ্যাট</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২৫০০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ওমেগা-৩</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২.৮ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ভিটামিন ই</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৮.৬ mcg</div>
+            <div class="text-gray-500 text-sm mt-1">ভিটামিন কে</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৬০০ IU</div>
+            <div class="text-gray-500 text-sm mt-1">ভিটামিন এ</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৪ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ক্যালসিয়াম</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ফসফরাস</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">০.৩ mg</div>
+            <div class="text-gray-500 text-sm mt-1">জিংক</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- গাওয়া ঘি বনাম ডালডা/নকল ঘি -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">গাওয়া ঘি বনাম ডালডা/নকল ঘি</h2>
+        <p class="text-gray-500">পার্থক্যটা জানুন, সঠিক সিদ্ধান্ত নিন</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="bg-indigo-50">
+                <th class="py-4 px-6 text-left text-indigo-700 font-bold">বিষয়</th>
+                <th class="py-4 px-6 text-center text-indigo-700 font-bold">🧈 গাওয়া ঘি</th>
+                <th class="py-4 px-6 text-center text-gray-500 font-bold">🛢️ ডালডা/নকল ঘি</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">উৎপাদন</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">দেশীয় গাভীর খাঁটি দুধ</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">পাম অয়েল, স্টার্চ, কেমিক্যাল</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">পুষ্টিগুণ</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">প্রচুর ভিটামিন ও মিনারেল</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">শূন্য</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">স্বাদ ও গন্ধ</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">প্রাকৃতিক মিষ্টি গন্ধ</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">কৃত্রিম ঘ্রাণ</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">ঘনত্ব</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">ঠাণ্ডায় জমে না পুরোপুরি</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">শক্ত হয়ে জমে যায়</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">স্বাস্থ্যকরতা</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">✅ মহৌষধ</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">❌ স্বাস্থ্যের জন্য ক্ষতিকর</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">আয়ুর্বেদিক গুণ</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">অনেক</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">নেই</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- কেন আমাদের থেকে নেবেন (যখন স্টকে থাকবে) -->
+    <section class="fade-in">
+      <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-10">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold gradient-text mb-2">কেন সদাই ঘর থেকে নেবেন?</h2>
+          <p class="text-gray-500">আমাদের বিশুদ্ধ গাওয়া ঘি কেনার ৬টি কারণ (যখন স্টকে আসবে)</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-check-double text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">১০০% খাঁটি ও ভেজালমুক্ত</h3>
+            <p class="text-gray-600 text-sm">কোনো ডালডা, স্টার্চ বা কেমিক্যাল ছাড়া সম্পূর্ণ বিশুদ্ধ দেশীয় গাভীর দুধ থেকে তৈরি।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-cow text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">দেশীয় গাভীর দুধ</h3>
+            <p class="text-gray-600 text-sm">আমাদের গাওয়া ঘি তৈরি হয় দেশীয় প্রজাতির গাভীর খাঁটি দুধ থেকে, যা A2 প্রোটিন সমৃদ্ধ।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-hand-holding-heart text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">হাতের তৈরি</h3>
+            <p class="text-gray-600 text-sm">ঐতিহ্যবাহী পদ্ধতিতে হাতের তৈরি, যা ঘির সব পুষ্টিগুণ ও স্বাদ অক্ষুণ্ণ রাখে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-truck text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">তাজা সরবরাহ</h3>
+            <p class="text-gray-600 text-sm">অর্ডার পেলে তাজা ঘি তৈরি করে পাঠানো হয়, যা দীর্ঘদিন ভালো থাকে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">নিরাপদ প্যাকেজিং</h3>
+            <p class="text-gray-600 text-sm">কাচের বোতলে দেওয়া হয়, যা ঘির মান ও তাজাত্ব ধরে রাখে এবং ফুটো হওয়ার ঝুঁকি কমায়।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-headset text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সার্বক্ষণিক সাপোর্ট</h3>
+            <p class="text-gray-600 text-sm">যেকোনো প্রশ্নে WhatsApp এ আমাদের সাথে যোগাযোগ করতে পারেন।</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ব্যবহারের নিয়ম ও টিপস -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-3xl font-bold gradient-text mb-6 text-center">গাওয়া ঘি ব্যবহারের উপায় ও টিপস</h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-bread-slice text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">রুটির সাথে</p>
+              <p class="text-gray-600 text-sm">গরম রুটির উপর সামান্য গাওয়া ঘি দিয়ে খান। স্বাদ ও পুষ্টি দুটোই বেড়ে যাবে।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-utensils text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">ভাতের সাথে</p>
+              <p class="text-gray-600 text-sm">গরম ভাতে এক চামচ গাওয়া ঘি মিশিয়ে খান। ডাল ও তরকারির সাথে খেতে অসাধারণ।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-mug-hot text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">দুধের সাথে</p>
+              <p class="text-gray-600 text-sm">রাতে ঘুমানোর আগে এক গ্লাস গরম দুধে এক চামচ গাওয়া ঘি মিশিয়ে খান। হজমশক্তি বাড়ায় ও ভালো ঘুম হয়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-cake text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">মিষ্টি ও পায়েসে</p>
+              <p class="text-gray-600 text-sm">পায়েস, হালুয়া ও মিষ্টি তৈরিতে গাওয়া ঘি ব্যবহার করুন। স্বাদে ও গন্ধে অনন্য হবে।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-spa text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">ত্বকের যত্নে</p>
+              <p class="text-gray-600 text-sm">গাওয়া ঘি গরম করে মুখে মালিশ করুন। শুষ্ক ত্বক ও বলিরেখা দূর করতে সাহায্য করে।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-nose text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">নাকে ব্যবহার</p>
+              <p class="text-gray-600 text-sm">সকালে খালি পেটে ২ ফোঁটা গাওয়া ঘি নাকে দিন। মাইগ্রেন, সাইনাস ও মাথাব্যথায় উপকারী।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-first-aid text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">ক্ষত নিরাময়ে</p>
+              <p class="text-gray-600 text-sm">গাওয়া ঘি লাগালে ছোটখাটো ক্ষত ও পোড়া দ্রুত সেরে যায়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-thermometer-half text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">সংরক্ষণ পদ্ধতি</p>
+              <p class="text-gray-600 text-sm">গাওয়া ঘি কাচের বোতলে রেখে ঠাণ্ডা ও শুষ্ক স্থানে রাখুন। ফ্রিজে না রাখলেও চলে।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- আয়ুর্বেদিক দৃষ্টিকোণ থেকে গাওয়া ঘি -->
+    <section class="fade-in">
+      <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-8">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <div class="md:w-1/3 text-center">
+            <div class="gradient-bg w-24 h-24 rounded-full flex items-center justify-center mx-auto">
+              <i class="fas fa-leaf text-white text-4xl"></i>
+            </div>
+          </div>
+          <div class="md:w-2/3">
+            <h3 class="text-2xl font-bold gradient-text mb-3">আয়ুর্বেদিক দৃষ্টিকোণ থেকে গাওয়া ঘি</h3>
+            <p class="text-gray-700 leading-relaxed mb-2">
+              আয়ুর্বেদ শাস্ত্রে গাওয়া ঘিকে "মহৌষধ" হিসেবে বর্ণনা করা হয়েছে। এটি ত্রিদোষ (বাত, পিত্ত, কফ) নিয়ন্ত্রণে সাহায্য করে।
+            </p>
+            <p class="text-gray-600">
+              * গাওয়া ঘি বুদ্ধি, স্মৃতিশক্তি ও মেধা বাড়ায়<br>
+              * শরীরের রোগ প্রতিরোধ ক্ষমতা বৃদ্ধি করে<br>
+              * হজমশক্তি উন্নত করে ও কোষ্ঠকাঠিন্য দূর করে<br>
+              * ত্বক ও চোখের জন্য উপকারী<br>
+              * বার্ধক্যের গতি কমায়
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notify when available -->
+    <section class="fade-in">
+      <div class="gradient-bg rounded-2xl p-10 text-center text-white relative overflow-hidden">
+        <div class="relative">
+          <h2 class="text-3xl font-bold mb-2">🧈 বিশুদ্ধ গাওয়া ঘি আবার স্টকে আসছে!</h2>
+          <p class="text-2xl font-bold mb-2 mt-3">শীঘ্রই পাওয়া যাবে</p>
+          <p class="mb-6 opacity-90 max-w-2xl mx-auto">বর্তমানে স্টক শেষ। নিচে আপনার ইমেইল দিন, পণ্যটি স্টকে এলে আমরা আপনাকে জানিয়ে দেব।</p>
+          
+          <div class="max-w-md mx-auto mt-4 flex flex-col sm:flex-row gap-2">
+            <input type="email" placeholder="আপনার ইমেইল দিন" class="flex-1 px-4 py-3 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white">
+            <button class="bg-white text-indigo-600 font-bold px-6 py-3 rounded-full hover:shadow-xl transition">
+              <i class="fas fa-bell mr-2"></i> জানাবেন
+            </button>
+          </div>
+          
+          <div class="flex flex-wrap gap-4 justify-center mt-8">
+            <a href="index.html"
+              class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white/10 transition">
+              <i class="fas fa-arrow-left mr-2"></i> হোমে ফিরুন
+            </a>
+            <a href="https://wa.me/8801630089610?text=বিশুদ্ধ গাওয়া ঘি কখন স্টকে আসবে জানতে চাই"
+              class="bg-white text-indigo-600 font-bold px-8 py-3 rounded-full hover:shadow-xl transition">
+              <i class="fab fa-whatsapp mr-2"></i> WhatsApp এ জানতে চাই
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white"></i>
+          </div>
+          <h2 class="text-2xl font-bold">সদাই ঘর</h2>
+        </div>
+        <p class="text-gray-300 mb-4">বিশুদ্ধ ও ভেজালমুক্ত পণ্য সরবরাহে আমরা অঙ্গীকারবদ্ধ।</p>
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="https://www.facebook.com/profile.php?id=61587291001067"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/8801630089610"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="border-t border-white/20 pt-4">
+          <p>&copy; ২০২৬ সদাই ঘর। সর্বস্বত্ব সংরক্ষিত।</p>
+          <p class="text-gray-400 text-sm mt-1">ডিজাইন ও ডেভেলপমেন্ট - Wisetech Agency - (Mamun)</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', (event) => {
+      if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
