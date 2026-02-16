@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>লাল চিনি | সদাই ঘর</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { font-family: 'Hind Siliguri', sans-serif; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn 0.8s ease forwards; }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #4f46e5, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-slate-50 to-indigo-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white text-lg"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold gradient-text">সদাই ঘর</h1>
+            <p class="text-xs text-gray-500 -mt-1">বিশুদ্ধতার প্রতিশ্রুতি</p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">হোম</a>
+          <a href="index.html#products" class="text-gray-700 hover:text-indigo-600 font-medium transition">পণ্য</a>
+          <a href="index.html#about-us" class="text-gray-700 hover:text-indigo-600 font-medium transition">আমাদের সম্পর্কে</a>
+          <a href="https://wa.me/8801630089610" class="text-gray-700 hover:text-indigo-600 font-medium transition">যোগাযোগ</a>
+          <a href="https://wa.me/8801630089610" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:shadow-lg transition">অর্ডার করুন</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menuBtn" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-2 shadow-lg rounded-lg mt-2">
+        <a href="index.html" class="block py-2 px-4 hover:bg-indigo-50 rounded">হোম</a>
+        <a href="index.html#products" class="block py-2 px-4 hover:bg-indigo-50 rounded">পণ্য</a>
+        <a href="index.html#about-us" class="block py-2 px-4 hover:bg-indigo-50 rounded">আমাদের সম্পর্কে</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 hover:bg-indigo-50 rounded">যোগাযোগ</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 bg-indigo-600 text-white rounded-full text-center mt-2">অর্ডার করুন</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden gradient-bg text-white">
+    <div class="absolute inset-0">
+      <img src="https://images.pexels.com/photos/128402/pexels-photo-128402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="লাল চিনি"
+        class="w-full h-full object-cover opacity-20">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
+      <div class="text-center">
+        <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm mb-4">
+          <i class="fas fa-home mr-1"></i>
+          <a href="index.html" class="hover:underline">হোম</a> / লাল চিনি
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🍬 লাল চিনি</h1>
+        <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">প্রকৃতির মিষ্টি উপহার — অপরিশোধিত, ভেজালমুক্ত ও পুষ্টিগুণে ভরপুর</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 space-y-16">
+
+    <!-- Price & Order Section -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="gradient-bg p-5 text-white text-center">
+          <p class="font-bold text-xl"><i class="fas fa-tags mr-2"></i>মূল্য তালিকা</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-weight text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">প্রতি কেজি</p>
+            <p class="text-4xl font-bold text-indigo-600 mb-1">১৫০৳</p>
+            <p class="text-green-600 text-sm font-semibold"><i class="fas fa-check-circle mr-1"></i>স্টকে আছে</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-truck text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">ডেলিভারি</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">২৪-৪৮ ঘণ্টা</p>
+            <p class="text-gray-500 text-sm">সারা বাংলাদেশে</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box-open text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">সর্বনিম্ন অর্ডার</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">১ কেজি</p>
+            <p class="text-gray-500 text-sm">পাইকারি অর্ডারে ছাড়</p>
+          </div>
+
+        </div>
+        <div class="p-6 bg-indigo-50 text-center">
+          <a href="https://wa.me/8801630089610?text=লাল চিনি অর্ডার করতে চাই, প্রতি কেজি ১৫০ টাকা"
+            class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold px-8 py-3 rounded-full hover:shadow-lg transition text-lg">
+            <i class="fab fa-whatsapp mr-2"></i> এখনই অর্ডার করুন
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Brown Sugar -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-indigo-500">
+        <h2 class="text-3xl font-bold gradient-text mb-5">লাল চিনি কী?</h2>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          লাল চিনি বা ব্রাউন সুগার হলো আখের রস থেকে তৈরি অপরিশোধিত বা আংশিক পরিশোধিত চিনি। এতে থাকে প্রাকৃতিক মোলাসেস (আখের গুড়) যা চিনিকে বাদামি রঙ দেয় এবং পুষ্টিগুণ অক্ষুণ্ণ রাখে।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          সাদা চিনি তৈরিতে আখের রসকে বহুবার রাসায়নিক প্রক্রিয়ায় পরিশোধন করা হয়, যাতে সব ধরনের মিনারেল, ভিটামিন ও পুষ্টিগুণ নষ্ট হয়ে যায়। কিন্তু লাল চিনিতে এই প্রক্রিয়া করা হয় না বলে এর প্রাকৃতিক পুষ্টিগুণ অনেকটাই থেকে যায়।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          হাজার বছর ধরে ভারতীয় উপমহাদেশে লাল চিনি ও গুড় স্বাস্থ্যকর মিষ্টি হিসেবে ব্যবহৃত হয়ে আসছে। আয়ুর্বেদিক চিকিৎসায়ও লাল চিনির বিশেষ গুরুত্ব রয়েছে।
+        </p>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">লাল চিনির গুণাগুণ ও উপকারিতা</h2>
+        <p class="text-gray-500">সাদা চিনি ছেড়ে লাল চিনিতে আসুন — শরীর ধন্যবাদ জানাবে</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-leaf text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">প্রাকৃতিক মিনারেল সমৃদ্ধ</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চিনিতে থাকে ক্যালসিয়াম, পটাশিয়াম, আয়রন, ম্যাগনেশিয়াম ও ফসফরাস। এই মিনারেলগুলো শরীরের বিভিন্ন কাজে অপরিহার্য। সাদা চিনিতে এগুলো পরিশোধন প্রক্রিয়ায় নষ্ট হয়ে যায়।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-tint text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">রক্তস্বল্পতা প্রতিরোধ</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চিনিতে থাকা আয়রন রক্তে হিমোগ্লোবিন তৈরিতে সাহায্য করে। নিয়মিত লাল চিনি খেলে রক্তস্বল্পতার সমস্যা কমে। বিশেষত মহিলাদের জন্য এটি খুবই উপকারী।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-female text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">মাসিকের ব্যথা কমায়</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চিনির সাথে আদা বা গরম পানি মিশিয়ে খেলে মাসিকের ব্যথা ও ক্র্যাম্প উল্লেখযোগ্যভাবে কমে। মোলাসেসে থাকা পটাশিয়াম ও ম্যাগনেশিয়াম পেশির খিঁচুনি কমাতে সাহায্য করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-bolt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">দ্রুত শক্তি সরবরাহ</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চিনি শরীরে দ্রুত শক্তি সরবরাহ করে। কঠোর পরিশ্রম বা ব্যায়ামের পর এক গ্লাস লাল চিনির শরবত ক্লান্তি দূর করে ও শরীরকে চাঙ্গা করে তোলে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-brain text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">মানসিক স্বাস্থ্যে উপকারী</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চিনিতে থাকা সেরোটোনিন উৎপাদনকারী উপাদান মন ভালো রাখতে সাহায্য করে। বিষণ্নতা ও উদ্বেগ কমাতে সীমিত পরিমাণে লাল চিনি উপকারী হতে পারে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-stomach text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">হজমে সহায়তা</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চিনিতে থাকা মোলাসেস পাচনতন্ত্রকে সুস্থ রাখে। এটি অন্ত্রের ভালো ব্যাকটেরিয়ার বৃদ্ধিতে সাহায্য করে এবং কোষ্ঠকাঠিন্য দূর করতে সহায়ক।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-bone text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">হাড় ও দাঁত মজবুত করে</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চিনিতে থাকা ক্যালসিয়াম ও ফসফরাস হাড় ও দাঁত মজবুত রাখতে সাহায্য করে। সাদা চিনির তুলনায় লাল চিনি দাঁতের ক্ষতি অনেক কম করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-baby text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">গর্ভবতী মায়েদের জন্য উপকারী</h3>
+          <p class="text-gray-600 leading-relaxed">গর্ভাবস্থায় আয়রন ও ক্যালসিয়ামের চাহিদা বাড়ে। লাল চিনি এই চাহিদা পূরণে সাহায্য করে। তবে পরিমিত পরিমাণে খেতে হবে এবং ডাক্তারের পরামর্শ নেওয়া উচিত।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-shield-alt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">অ্যান্টিঅক্সিডেন্ট গুণ</h3>
+          <p class="text-gray-600 leading-relaxed">মোলাসেসে থাকা পলিফেনল অ্যান্টিঅক্সিডেন্ট হিসেবে কাজ করে। এটি শরীরের ফ্রি র‍্যাডিক্যালের ক্ষতি থেকে কোষ রক্ষা করে এবং বার্ধক্যের গতি কমায়।</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Nutrition -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="gradient-bg p-4 text-white">
+          <h3 class="font-bold text-lg text-center"><i class="fas fa-chart-bar mr-2"></i>লাল চিনির পুষ্টিমান (প্রতি ১০০ গ্রামে)</h3>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-0 divide-x divide-y divide-gray-100">
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৩৮০</div>
+            <div class="text-gray-500 text-sm mt-1">ক্যালরি</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৯৮ গ্রা</div>
+            <div class="text-gray-500 text-sm mt-1">কার্বোহাইড্রেট</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৮৫ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ক্যালসিয়াম</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২.১ mg</div>
+            <div class="text-gray-500 text-sm mt-1">আয়রন</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৩৫০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">পটাশিয়াম</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৩০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ম্যাগনেশিয়াম</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২৫ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ফসফরাস</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">০.২০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">জিংক</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">০.১ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ভিটামিন বি৬</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">০.৫ mg</div>
+            <div class="text-gray-500 text-sm mt-1">নিয়াসিন</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">০.০৫ mg</div>
+            <div class="text-gray-500 text-sm mt-1">থায়ামিন</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">০.০৩ mg</div>
+            <div class="text-gray-500 text-sm mt-1">রিবোফ্লাভিন</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- লাল vs সাদা চিনি -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">লাল চিনি বনাম সাদা চিনি</h2>
+        <p class="text-gray-500">পার্থক্যটা জানুন, সঠিক সিদ্ধান্ত নিন</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="bg-indigo-50">
+                <th class="py-4 px-6 text-left text-indigo-700 font-bold">বিষয়</th>
+                <th class="py-4 px-6 text-center text-indigo-700 font-bold">🍬 লাল চিনি</th>
+                <th class="py-4 px-6 text-center text-gray-500 font-bold">⚪ সাদা চিনি</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">পরিশোধন</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">অপরিশোধিত / প্রাকৃতিক</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">বহুবার পরিশোধিত</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">মিনারেল</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">প্রচুর পরিমাণে আছে</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">নেই বললেই চলে</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">রাসায়নিক ব্যবহার</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">নেই</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">সালফার ও ব্লিচিং এজেন্ট</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">গ্লাইসেমিক ইনডেক্স</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">তুলনামূলক কম (৫৫-৬০)</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">বেশি (৬৫-৭০)</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">স্বাদ</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">সমৃদ্ধ ক্যারামেল স্বাদ</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm">সাধারণ মিষ্টি</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">স্বাস্থ্যকরতা</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">✅ বেশি স্বাস্থ্যকর</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">❌ কম স্বাস্থ্যকর</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- কেন আমাদের থেকে নেবেন -->
+    <section class="fade-in">
+      <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-10">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold gradient-text mb-2">কেন সদাই ঘর থেকে নেবেন?</h2>
+          <p class="text-gray-500">আমাদের লাল চিনি কেনার ৬টি কারণ</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-check-double text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">১০০% ভেজালমুক্ত</h3>
+            <p class="text-gray-600 text-sm">কোনো কৃত্রিম রং, সংরক্ষক বা রাসায়নিক মেশানো নেই। সরাসরি আখের রস থেকে তৈরি।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-hand-holding-usd text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সাশ্রয়ী মূল্য</h3>
+            <p class="text-gray-600 text-sm">মধ্যস্বত্বভোগী না থাকায় মাত্র ১৫০৳/কেজিতে পাচ্ছেন সর্বোচ্চ মানের লাল চিনি।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-industry text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সরাসরি উৎপাদনকারী থেকে</h3>
+            <p class="text-gray-600 text-sm">আমরা সরাসরি স্থানীয় কৃষক ও উৎপাদনকারীদের কাছ থেকে সংগ্রহ করি, তাই সর্বোচ্চ মান নিশ্চিত।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-shipping-fast text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">দ্রুত ডেলিভারি</h3>
+            <p class="text-gray-600 text-sm">অর্ডার করলে ২৪-৪৮ ঘণ্টার মধ্যে আপনার দোরগোড়ায় পৌঁছে দেওয়া হবে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">নিরাপদ প্যাকেজিং</h3>
+            <p class="text-gray-600 text-sm">বায়ুরোধী প্যাকেটে দেওয়া হয় যাতে পণ্যের মান ও তাজাত্ব বজায় থাকে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-headset text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সার্বক্ষণিক সাপোর্ট</h3>
+            <p class="text-gray-600 text-sm">যেকোনো সমস্যা বা প্রশ্নে আমরা সর্বদা আপনার পাশে আছি। WhatsApp এ যোগাযোগ করুন।</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ব্যবহারের নিয়ম ও টিপস -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-3xl font-bold gradient-text mb-6 text-center">লাল চিনি ব্যবহারের উপায় ও টিপস</h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-mug-hot text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">চা ও কফিতে</p>
+              <p class="text-gray-600 text-sm">সাদা চিনির বদলে লাল চিনি ব্যবহার করুন। স্বাদ আরও সমৃদ্ধ হবে এবং পুষ্টিগুণ বাড়বে।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-blender text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">শরবত ও স্মুদিতে</p>
+              <p class="text-gray-600 text-sm">ঠান্ডা পানীয়তে মিশিয়ে পান করুন। লেবু-পানি বা তোকমা দিয়ে শরবত তৈরি করুন।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-cookie text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">বেকিং ও মিষ্টি রান্নায়</p>
+              <p class="text-gray-600 text-sm">কেক, পুডিং, পায়েস ও হালুয়াতে ব্যবহার করলে স্বাদ অনন্য হয় এবং রঙও সুন্দর হয়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-mortar-pestle text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">ঘরোয়া প্রতিকারে</p>
+              <p class="text-gray-600 text-sm">আদা ও লাল চিনির মিশ্রণ সর্দি-কাশি ও গলাব্যথায় কার্যকর। দুধের সাথে মিশিয়ে খেতে পারেন।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-seedling text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">দৈনন্দিন রান্নায়</p>
+              <p class="text-gray-600 text-sm">তরকারি, সস ও মেরিনেডে সাদা চিনির পরিবর্তে ব্যবহার করুন। বিশেষ করে টক-মিষ্টি রান্নায় দারুণ হয়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-spa text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">স্কিন স্ক্রাব হিসেবে</p>
+              <p class="text-gray-600 text-sm">নারকেল তেলের সাথে মিশিয়ে ত্বক স্ক্রাব করলে ত্বক উজ্জ্বল ও মসৃণ হয়। মৃত কোষ দূর করে।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-prescription-bottle text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">মাসিকের যত্নে</p>
+              <p class="text-gray-600 text-sm">মাসিকের সময় কালিজিরা ও লাল চিনি মিশিয়ে খেলে ব্যথা কমে ও রক্তস্বল্পতা দূর হয়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-thermometer-half text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">সংরক্ষণ পদ্ধতি</p>
+              <p class="text-gray-600 text-sm">বায়ুরোধী পাত্রে ঠাণ্ডা ও শুষ্ক স্থানে রাখুন। ফ্রিজে না রাখাই ভালো, আর্দ্রতা শুষে নিতে পারে।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="fade-in">
+      <div class="gradient-bg rounded-2xl p-10 text-center text-white relative overflow-hidden">
+        <div class="relative">
+          <h2 class="text-3xl font-bold mb-2">🍬 লাল চিনি অর্ডার করুন</h2>
+          <p class="text-4xl font-bold mb-2 mt-3">মাত্র ১৫০৳/কেজি</p>
+          <p class="mb-6 opacity-90">সীমিত স্টক — এখনই অর্ডার করুন!</p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="https://wa.me/8801630089610?text=লাল চিনি অর্ডার করতে চাই"
+              class="bg-white text-indigo-600 font-bold px-8 py-3 rounded-full hover:shadow-xl transition text-lg">
+              <i class="fab fa-whatsapp mr-2"></i> WhatsApp এ অর্ডার করুন
+            </a>
+            <a href="index.html"
+              class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white/10 transition">
+              <i class="fas fa-arrow-left mr-2"></i> হোমে ফিরুন
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white"></i>
+          </div>
+          <h2 class="text-2xl font-bold">সদাই ঘর</h2>
+        </div>
+        <p class="text-gray-300 mb-4">বিশুদ্ধ ও ভেজালমুক্ত পণ্য সরবরাহে আমরা অঙ্গীকারবদ্ধ।</p>
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="https://www.facebook.com/profile.php?id=61587291001067"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/8801630089610"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="border-t border-white/20 pt-4">
+          <p>&copy; ২০২৬ সদাই ঘর। সর্বস্বত্ব সংরক্ষিত।</p>
+          <p class="text-gray-400 text-sm mt-1">ডিজাইন ও ডেভেলপমেন্ট - Wisetech Agency - (Mamun)</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', (event) => {
+      if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

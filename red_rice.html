@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>লাল চাল | সদাই ঘর</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { font-family: 'Hind Siliguri', sans-serif; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn 0.8s ease forwards; }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #4f46e5, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-slate-50 to-indigo-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white text-lg"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold gradient-text">সদাই ঘর</h1>
+            <p class="text-xs text-gray-500 -mt-1">বিশুদ্ধতার প্রতিশ্রুতি</p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">হোম</a>
+          <a href="index.html#products" class="text-gray-700 hover:text-indigo-600 font-medium transition">পণ্য</a>
+          <a href="index.html#about-us" class="text-gray-700 hover:text-indigo-600 font-medium transition">আমাদের সম্পর্কে</a>
+          <a href="https://wa.me/8801630089610" class="text-gray-700 hover:text-indigo-600 font-medium transition">যোগাযোগ</a>
+          <a href="https://wa.me/8801630089610" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:shadow-lg transition">অর্ডার করুন</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menuBtn" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-2 shadow-lg rounded-lg mt-2">
+        <a href="index.html" class="block py-2 px-4 hover:bg-indigo-50 rounded">হোম</a>
+        <a href="index.html#products" class="block py-2 px-4 hover:bg-indigo-50 rounded">পণ্য</a>
+        <a href="index.html#about-us" class="block py-2 px-4 hover:bg-indigo-50 rounded">আমাদের সম্পর্কে</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 hover:bg-indigo-50 rounded">যোগাযোগ</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 bg-indigo-600 text-white rounded-full text-center mt-2">অর্ডার করুন</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden gradient-bg text-white">
+    <div class="absolute inset-0">
+      <img src="https://images.pexels.com/photos/4110250/pexels-photo-4110250.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="লাল চাল"
+        class="w-full h-full object-cover opacity-20">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
+      <div class="text-center">
+        <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm mb-4">
+          <i class="fas fa-home mr-1"></i>
+          <a href="index.html" class="hover:underline">হোম</a> / লাল চাল
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🌾 লাল চাল</h1>
+        <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">প্রকৃতির অপরিশোধিত সম্পদ — পুষ্টিগুণে ভরপুর, স্বাদে অনন্য</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 space-y-16">
+
+    <!-- Price & Order Section -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="gradient-bg p-5 text-white text-center">
+          <p class="font-bold text-xl"><i class="fas fa-tags mr-2"></i>মূল্য তালিকা</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-weight text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">প্রতি কেজি</p>
+            <p class="text-4xl font-bold text-indigo-600 mb-1">১৩০৳</p>
+            <p class="text-green-600 text-sm font-semibold"><i class="fas fa-check-circle mr-1"></i>স্টকে আছে</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-truck text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">ডেলিভারি</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">২৪-৪৮ ঘণ্টা</p>
+            <p class="text-gray-500 text-sm">সারা বাংলাদেশে</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box-open text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">সর্বনিম্ন অর্ডার</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">১ কেজি</p>
+            <p class="text-gray-500 text-sm">পাইকারি অর্ডারে ছাড়</p>
+          </div>
+
+        </div>
+        <div class="p-6 bg-indigo-50 text-center">
+          <a href="https://wa.me/8801630089610?text=লাল চাল অর্ডার করতে চাই, প্রতি কেজি ১৩০ টাকা"
+            class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold px-8 py-3 rounded-full hover:shadow-lg transition text-lg">
+            <i class="fab fa-whatsapp mr-2"></i> এখনই অর্ডার করুন
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Red Rice -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-indigo-500">
+        <h2 class="text-3xl font-bold gradient-text mb-5">লাল চাল কী?</h2>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          লাল চাল এক ধরনের অপরিশোধিত চাল যার উপরের তুষের অংশ (ব্রান) অক্ষত থাকে। এই লাল তুষের জন্যই চালটির রঙ লালচে হয় এবং এতে বিদ্যমান থাকে প্রচুর ফাইবার, ভিটামিন, মিনারেল ও অ্যান্টিঅক্সিডেন্ট।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          সাদা চাল তৈরির সময় চালের ব্রান ও জীবাণু অংশ সম্পূর্ণ ফেলে দেওয়া হয়, যার ফলে চাল তার পুষ্টিগুণের সিংহভাগ হারায়। কিন্তু লাল চালে এই অংশগুলো অক্ষুণ্ণ থাকায় এটি এক সুপারফুড হিসেবে বিবেচিত।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          বাংলাদেশের বিভিন্ন অঞ্চলে ঐতিহ্যবাহী লাল চালের চাষ হয়ে থাকে। এটি শুধু পুষ্টিকরই নয়, খেতে也非常 সুস্বাদু এবং ভাতের মচমচে ভাব ও মিষ্টি স্বাদের জন্য অনেকের কাছে প্রিয়।
+        </p>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">লাল চালের গুণাগুণ ও উপকারিতা</h2>
+        <p class="text-gray-500">সাদা চাল ছেড়ে লাল চাল খান — সুস্থ থাকুন সুরক্ষিত</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-dna text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">উচ্চ ফাইবার সমৃদ্ধ</h3>
+          <p class="text-gray-600 leading-relaxed">প্রতি ১০০ গ্রাম লাল চালে প্রায় ৩-৪ গ্রাম আঁশ থাকে, যা হজমশক্তি উন্নত করে, কোষ্ঠকাঠিন্য দূর করে এবং পেট দীর্ঘক্ষণ ভরা রাখে, ফলে ওজন নিয়ন্ত্রণে সহায়তা করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-heartbeat text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">হৃদযন্ত্র সুরক্ষা</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চালে থাকা ম্যাগনেশিয়াম ও অ্যান্টিঅক্সিডেন্ট রক্তচাপ নিয়ন্ত্রণে রাখে, খারাপ কোলেস্টেরল কমায় এবং হৃদরোগের ঝুঁকি হ্রাস করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-bolt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">শক্তি জোগায়</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চাল জটিল কার্বোহাইড্রেটের উৎস, যা ধীরে ধীরে শক্তি সরবরাহ করে এবং দীর্ঘক্ষণ সক্রিয় রাখে। এটি ডায়াবেটিস রোগীদের জন্যও নিরাপদ কারণ এর গ্লাইসেমিক ইনডেক্স কম।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-bone text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">হাড় মজবুত করে</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চালে প্রচুর পরিমাণে ম্যাগনেশিয়াম ও ক্যালসিয়াম আছে, যা হাড়ের গঠন ও ঘনত্ব বাড়াতে সাহায্য করে এবং অস্টিওপোরোসিস প্রতিরোধ করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-shield-alt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">অ্যান্টিঅক্সিডেন্ট সমৃদ্ধ</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চালের লাল রঙ আসলে অ্যান্থোসায়ানিন নামক শক্তিশালী অ্যান্টিঅক্সিডেন্ট থেকে, যা শরীরের কোষকে ক্ষয় থেকে রক্ষা করে, ক্যান্সার প্রতিরোধে সহায়তা করে এবং ত্বক উজ্জ্বল রাখে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-lungs text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">শ্বাসতন্ত্রের জন্য উপকারী</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চালে থাকা ম্যাগনেশিয়াম ও সেলেনিয়াম ফুসফুসের কার্যকারিতা উন্নত করে এবং হাঁপানি ও অন্যান্য শ্বাসকষ্টের সমস্যা কমাতে সাহায্য করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-weight-scale text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">ওজন কমাতে সহায়ক</h3>
+          <p class="text-gray-600 leading-relaxed">উচ্চ ফাইবার ও কম গ্লাইসেমিক ইনডেক্সের কারণে লাল চাল খেলে ক্ষুধা কম লাগে, অতিরিক্ত খাওয়া থেকে বিরত রাখে এবং ওজন কমাতে কার্যকর ভূমিকা রাখে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-brain text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">মস্তিষ্কের কার্যকারিতা বৃদ্ধি</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চালে থাকা ভিটামিন বি কমপ্লেক্স ও ম্যাগনেশিয়াম স্নায়ুতন্ত্র সচল রাখে, স্মৃতিশক্তি বাড়ায় এবং মাইগ্রেনের ব্যথা কমাতে সাহায্য করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-hand-holding-heart text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">ডায়াবেটিস নিয়ন্ত্রণ</h3>
+          <p class="text-gray-600 leading-relaxed">লাল চালের ধীরে হজম হওয়া শর্করা রক্তে সুগারের মাত্রা হঠাৎ বাড়তে দেয় না, যা ডায়াবেটিস রোগীদের জন্য অত্যন্ত উপকারী।</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Nutrition -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="gradient-bg p-4 text-white">
+          <h3 class="font-bold text-lg text-center"><i class="fas fa-chart-bar mr-2"></i>লাল চালের পুষ্টিমান (প্রতি ১০০ গ্রাম)</h3>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-0 divide-x divide-y divide-gray-100">
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৩৬০</div>
+            <div class="text-gray-500 text-sm mt-1">ক্যালরি</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৭৬ গ্রা</div>
+            <div class="text-gray-500 text-sm mt-1">কার্বোহাইড্রেট</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৭.৫ গ্রা</div>
+            <div class="text-gray-500 text-sm mt-1">প্রোটিন</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২.৭ গ্রা</div>
+            <div class="text-gray-500 text-sm mt-1">চর্বি</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৩.৫ গ্রা</div>
+            <div class="text-gray-500 text-sm mt-1">ফাইবার</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২৩ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ক্যালসিয়াম</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl bold text-indigo-600">২.০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">আয়রন</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">১৪৩ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ম্যাগনেশিয়াম</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২৬৪ mg</div>
+            <div class="text-gray-500 text-sm mt-1">পটাশিয়াম</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">০.৩ mg</div>
+            <div class="text-gray-500 text-sm mt-1">জিংক</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২.৩ mg</div>
+            <div class="text-gray-500 text-sm mt-1">নিয়াসিন</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">০.২ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ভিটামিন B6</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- লাল vs সাদা চাল -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">লাল চাল বনাম সাদা চাল</h2>
+        <p class="text-gray-500">পার্থক্যটা জানুন, সঠিক সিদ্ধান্ত নিন</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="bg-indigo-50">
+                <th class="py-4 px-6 text-left text-indigo-700 font-bold">বিষয়</th>
+                <th class="py-4 px-6 text-center text-indigo-700 font-bold">🌾 লাল চাল</th>
+                <th class="py-4 px-6 text-center text-gray-500 font-bold">⚪ সাদা চাল</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">পরিশোধন</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">অপরিশোধিত (তুষসহ)</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">পরিশোধিত (তুষহীন)</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">ফাইবার</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">উচ্চ (৩-৪ গ্রাম)</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">নগণ্য (০.৫ গ্রাম)</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">গ্লাইসেমিক ইনডেক্স</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">নিম্ন (৫০-৫৫)</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">উচ্চ (৭০-৭৫)</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">ভিটামিন ও মিনারেল</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">প্রচুর পরিমাণে বিদ্যমান</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">প্রায় নেই</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">ওজন নিয়ন্ত্রণ</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">সহায়ক</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">ক্ষতিকর হতে পারে</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">স্বাস্থ্যকরতা</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">✅ সুপারফুড</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">❌ খালি ক্যালরি</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- কেন আমাদের থেকে নেবেন -->
+    <section class="fade-in">
+      <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-10">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold gradient-text mb-2">কেন সদাই ঘর থেকে নেবেন?</h2>
+          <p class="text-gray-500">আমাদের লাল চাল কেনার ৬টি কারণ</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-check-double text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">১০০% খাঁটি ও ভেজালমুক্ত</h3>
+            <p class="text-gray-600 text-sm">কোনো কৃত্রিম রং, মেশানো নেই। সরাসরি দেশীয় জাতের লাল চাল।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-hand-holding-usd text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সাশ্রয়ী মূল্য</h3>
+            <p class="text-gray-600 text-sm">মধ্যস্বত্বভোগী না থাকায় মাত্র ১৩০৳/কেজিতেই পাচ্ছেন উত্তম মানের লাল চাল।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-industry text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সরাসরি কৃষকের কাছ থেকে</h3>
+            <p class="text-gray-600 text-sm">স্থানীয় কৃষকদের কাছ থেকে সংগ্রহ করি, ফলে ন্যায্য মূল্য ও খাঁটি পণ্য নিশ্চিত।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-shipping-fast text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">দ্রুত ডেলিভারি</h3>
+            <p class="text-gray-600 text-sm">অর্ডার করলে ২৪-৪৮ ঘণ্টার মধ্যে আপনার বাড়িতে পৌঁছে যাবে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">পরিষ্কার ও নিরাপদ প্যাকেজিং</h3>
+            <p class="text-gray-600 text-sm">জিপ Lock প্যাকেটে দেওয়া হয়, যা চালের তাজাত্ব ও পুষ্টিগুণ ধরে রাখে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-headset text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সার্বক্ষণিক সাপোর্ট</h3>
+            <p class="text-gray-600 text-sm">যেকোনো প্রশ্নে WhatsApp এ আমাদের সাথে যোগাযোগ করতে পারেন।</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- রান্নার পদ্ধতি ও টিপস -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-3xl font-bold gradient-text mb-6 text-center">লাল চাল রান্নার পদ্ধতি ও টিপস</h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-utensils text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">ভাত রান্নার পদ্ধতি</p>
+              <p class="text-gray-600 text-sm">প্রথমে চাল ভালো করে ধুয়ে ৩০ মিনিট ভিজিয়ে রাখুন। তারপর প্রতি কাপ চালের সাথে ২.৫ কাপ পানি দিয়ে রান্না করুন। সাদা চালের চেয়ে একটু বেশি পানি ও সময় প্রয়োজন।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-temperature-high text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">প্রেশার কুকারে রান্না</p>
+              <p class="text-gray-600 text-sm">প্রেশার কুকারে ১:২ অনুপাতে পানি দিন (১ কাপ চালের সাথে ২ কাপ পানি)। ৩-৪টি সিটি দেওয়া পর্যন্ত রান্না করুন।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-salad text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">খিচুড়ি ও পোলাও</p>
+              <p class="text-gray-600 text-sm">লাল চাল দিয়ে খিচুড়ি ও পোলাও খুব পুষ্টিকর ও সুস্বাদু হয়। মশলার সাথে এর স্বাদ অসাধারণ।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-moon text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">ভেজানো পানি ফেলে দেবেন না</p>
+              <p class="text-gray-600 text-sm">চাল ভিজানোর পানিতে অনেক পুষ্টি উপাদান চলে আসে। এই পানি ফেলে না দিয়ে তরকারি রান্নায় ব্যবহার করতে পারেন।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-seedling text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">ডায়েট ফ্রেন্ডলি</p>
+              <p class="text-gray-600 text-sm">ওজন কমাতে চাইলে লাঞ্চে লাল চালের ভাত খেতে পারেন। এটি দীর্ঘক্ষণ পেট ভরা রাখবে এবং অতিরিক্ত খাওয়া কমাবে।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-thermometer-half text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">সংরক্ষণ পদ্ধতি</p>
+              <p class="text-gray-600 text-sm">লাল চাল বায়ুরোধী পাত্রে ঠাণ্ডা ও শুষ্ক স্থানে রাখুন। এতে পোকা ধরার সম্ভাবনা কমে এবং দীর্ঘদিন ভালো থাকে।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="fade-in">
+      <div class="gradient-bg rounded-2xl p-10 text-center text-white relative overflow-hidden">
+        <div class="relative">
+          <h2 class="text-3xl font-bold mb-2">🌾 লাল চাল অর্ডার করুন</h2>
+          <p class="text-4xl font-bold mb-2 mt-3">মাত্র ১৩০৳/কেজি</p>
+          <p class="mb-6 opacity-90">সীমিত স্টক — এখনই অর্ডার করুন!</p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="https://wa.me/8801630089610?text=লাল চাল অর্ডার করতে চাই, প্রতি কেজি ১৩০ টাকা"
+              class="bg-white text-indigo-600 font-bold px-8 py-3 rounded-full hover:shadow-xl transition text-lg">
+              <i class="fab fa-whatsapp mr-2"></i> WhatsApp এ অর্ডার করুন
+            </a>
+            <a href="index.html"
+              class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white/10 transition">
+              <i class="fas fa-arrow-left mr-2"></i> হোমে ফিরুন
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white"></i>
+          </div>
+          <h2 class="text-2xl font-bold">সদাই ঘর</h2>
+        </div>
+        <p class="text-gray-300 mb-4">বিশুদ্ধ ও ভেজালমুক্ত পণ্য সরবরাহে আমরা অঙ্গীকারবদ্ধ।</p>
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="https://www.facebook.com/profile.php?id=61587291001067"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/8801630089610"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="border-t border-white/20 pt-4">
+          <p>&copy; ২০২৬ সদাই ঘর। সর্বস্বত্ব সংরক্ষিত।</p>
+          <p class="text-gray-400 text-sm mt-1">ডিজাইন ও ডেভেলপমেন্ট - Wisetech Agency - (Mamun)</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', (event) => {
+      if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+
+</html>

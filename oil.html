@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>খাঁটি সরিষার তেল | সদাই ঘর</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * { font-family: 'Hind Siliguri', sans-serif; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn 0.8s ease forwards; }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a855f7 100%);
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #4f46e5, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-slate-50 to-indigo-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white text-lg"></i>
+          </div>
+          <div>
+            <h1 class="text-2xl font-bold gradient-text">সদাই ঘর</h1>
+            <p class="text-xs text-gray-500 -mt-1">বিশুদ্ধতার প্রতিশ্রুতি</p>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="text-gray-700 hover:text-indigo-600 font-medium transition">হোম</a>
+          <a href="index.html#products" class="text-gray-700 hover:text-indigo-600 font-medium transition">পণ্য</a>
+          <a href="index.html#about-us" class="text-gray-700 hover:text-indigo-600 font-medium transition">আমাদের সম্পর্কে</a>
+          <a href="https://wa.me/8801630089610" class="text-gray-700 hover:text-indigo-600 font-medium transition">যোগাযোগ</a>
+          <a href="https://wa.me/8801630089610" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:shadow-lg transition">অর্ডার করুন</a>
+        </div>
+
+        <div class="md:hidden">
+          <button id="menuBtn" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-2 shadow-lg rounded-lg mt-2">
+        <a href="index.html" class="block py-2 px-4 hover:bg-indigo-50 rounded">হোম</a>
+        <a href="index.html#products" class="block py-2 px-4 hover:bg-indigo-50 rounded">পণ্য</a>
+        <a href="index.html#about-us" class="block py-2 px-4 hover:bg-indigo-50 rounded">আমাদের সম্পর্কে</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 hover:bg-indigo-50 rounded">যোগাযোগ</a>
+        <a href="https://wa.me/8801630089610" class="block py-2 px-4 bg-indigo-600 text-white rounded-full text-center mt-2">অর্ডার করুন</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="relative overflow-hidden gradient-bg text-white">
+    <div class="absolute inset-0">
+      <img src="https://images.pexels.com/photos/4198016/pexels-photo-4198016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="খাঁটি সরিষার তেল"
+        class="w-full h-full object-cover opacity-20">
+    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
+      <div class="text-center">
+        <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm mb-4">
+          <i class="fas fa-home mr-1"></i>
+          <a href="index.html" class="hover:underline">হোম</a> / খাঁটি সরিষার তেল
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">🫒 খাঁটি সরিষার তেল</h1>
+        <p class="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">কলকাতে ঠান্ডা চাপানো, খাঁটি ও ভেজালমুক্ত — বাংলার ঐতিহ্যবাহী সুস্বাদু তেল</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto p-4 sm:p-6 space-y-16">
+
+    <!-- Price & Order Section -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="gradient-bg p-5 text-white text-center">
+          <p class="font-bold text-xl"><i class="fas fa-tags mr-2"></i>মূল্য তালিকা</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-weight text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">প্রতি কেজি (লিটার)</p>
+            <p class="text-4xl font-bold text-indigo-600 mb-1">১২০০৳</p>
+            <p class="text-green-600 text-sm font-semibold"><i class="fas fa-check-circle mr-1"></i>স্টকে আছে</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-truck text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">ডেলিভারি</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">২৪-৪৮ ঘণ্টা</p>
+            <p class="text-gray-500 text-sm">সারা বাংলাদেশে</p>
+          </div>
+
+          <div class="p-8 text-center">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box-open text-white text-2xl"></i>
+            </div>
+            <p class="text-gray-500 mb-1">সর্বনিম্ন অর্ডার</p>
+            <p class="text-2xl font-bold text-gray-800 mb-1">১ লিটার</p>
+            <p class="text-gray-500 text-sm">পাইকারি অর্ডারে ছাড়</p>
+          </div>
+
+        </div>
+        <div class="p-6 bg-indigo-50 text-center">
+          <a href="https://wa.me/8801630089610?text=খাঁটি সরিষার তেল অর্ডার করতে চাই, প্রতি লিটার ১২০০ টাকা"
+            class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold px-8 py-3 rounded-full hover:shadow-lg transition text-lg">
+            <i class="fab fa-whatsapp mr-2"></i> এখনই অর্ডার করুন
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What is Mustard Oil -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-indigo-500">
+        <h2 class="text-3xl font-bold gradient-text mb-5">খাঁটি সরিষার তেল কী?</h2>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          খাঁটি সরিষার তেল হলো সরিষার বীজ থেকে ঠান্ডা চাপ পদ্ধতিতে (ঘানি বা কোল্ড প্রেস) প্রাকৃতিকভাবে বের করা তেল। এই প্রক্রিয়ায় তেলের সব পুষ্টিগুণ, এনজাইম ও প্রাকৃতিক স্বাদ অক্ষুণ্ণ থাকে।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+          বাংলার ঐতিহ্যবাহী রান্নায় সরিষার তেলের বিশেষ স্থান। এর তীব্র ঘ্রাণ, ঝাঁঝালো স্বাদ এবং পুষ্টিগুণের জন্য এটি শুধু রান্নায় নয়, আয়ুর্বেদিক চিকিৎসা ও ত্বক-চুলের যত্নেও ব্যবহৃত হয়।
+        </p>
+        <p class="text-gray-700 leading-relaxed text-lg">
+          বাজারে অধিকাংশ তেলই রাসায়নিক প্রক্রিয়ায় পরিশোধিত ও ভেজালযুক্ত। কিন্তু আমাদের সরিষার তেল সম্পূর্ণ খাঁটি, ঘানিতে তৈরি এবং কোনো ধরনের রাসায়নিক বা সংরক্ষক ছাড়াই সংগ্রহ করা।
+        </p>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">সরিষার তেলের গুণাগুণ ও উপকারিতা</h2>
+        <p class="text-gray-500">প্রকৃতির দান, স্বাস্থ্যের জন্য মহৌষধ — খাঁটি সরিষার তেল</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-heartbeat text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">হৃদযন্ত্র সুরক্ষা</h3>
+          <p class="text-gray-600 leading-relaxed">সরিষার তেলে আছে মনোস্যাচুরেটেড ও পলিআনস্যাচুরেটেড ফ্যাট যা খারাপ কোলেস্টেরল কমায় এবং ভালো কোলেস্টেরল বাড়ায়। এটি হৃদরোগের ঝুঁকি হ্রাস করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-shield-alt text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">প্রাকৃতিক অ্যান্টিবায়োটিক</h3>
+          <p class="text-gray-600 leading-relaxed">সরিষার তেলে থাকা অ্যালাইল আইসোথায়োসায়ানেট ব্যাকটেরিয়া ও ছত্রাকের বিরুদ্ধে লড়াই করে। সর্দি-কাশি ও ইনফেকশন প্রতিরোধে এটি কার্যকর।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-thermometer-half text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">শরীর গরম রাখে</h3>
+          <p class="text-gray-600 leading-relaxed">সরিষার তেল প্রকৃতিগতভাবে উষ্ণ প্রকৃতির। শীতকালে সরিষার তেল মালিশ করলে বা রান্নায় ব্যবহার করলে শরীর গরম থাকে এবং সর্দি-কাশি থেকে রক্ষা পাওয়া যায়।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-bone text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">গাঁটে ব্যথা ও বাতের ব্যথা কমায়</h3>
+          <p class="text-gray-600 leading-relaxed">সরিষার তেল গরম করে ব্যথার স্থানে মালিশ করলে রক্ত সঞ্চালন বাড়ে এবং ব্যথা কমে। এতে থাকা ওমেগা-৩ ফ্যাটি অ্যাসিড প্রদাহ কমাতে সাহায্য করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-lungs text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">শ্বাসতন্ত্রের সমস্যা সমাধান</h3>
+          <p class="text-gray-600 leading-relaxed">সরিষার তেলের ধোঁয়া নিলে নাক বন্ধ হয়ে যাওয়া, সর্দি ও অ্যাজমার সমস্যা কমে। বুকে সরিষার তেল মালিশ করলে কফ জমার সমস্যা দূর হয়।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-scissors text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">চুলের যত্নে</h3>
+          <p class="text-gray-600 leading-relaxed">সরিষার তেল চুলের গোড়া মজবুত করে, চুল পড়া কমায় এবং খুশকি দূর করে। এতে থাকা ভিটামিন ও মিনারেল চুলের বৃদ্ধিতে সহায়তা করে।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-spa text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">ত্বকের যত্নে</h3>
+          <p class="text-gray-600 leading-relaxed">সরিষার তেলে থাকা ভিটামিন ই ত্বক উজ্জ্বল করে এবং ত্বকের সংক্রমণ রোধ করে। নিয়মিত মালিশ করলে ত্বক নরম ও মসৃণ হয়।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-utensils text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">রান্নার স্বাদ বৃদ্ধি</h3>
+          <p class="text-gray-600 leading-relaxed">সরিষার তেলের তীব্র ঘ্রাণ ও ঝাঁঝালো স্বাদ বাঙালি রান্নাকে অনন্য মাত্রা দেয়। মাছ, মাংস ও তরকারিতে এর ব্যবহার স্বাদ দ্বিগুণ বাড়িয়ে দেয়।</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+          <div class="gradient-bg w-14 h-14 rounded-full flex items-center justify-center mb-4">
+            <i class="fas fa-baby text-white text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-gray-800">শিশুর মালিশে</h3>
+          <p class="text-gray-600 leading-relaxed">সরিষার তেল শিশুর হাড় মজবুত করে এবং পেশির বিকাশে সহায়তা করে। নিয়মিত মালিশ করলে শিশুর শরীর নরম ও স্বাস্থ্যোজ্জ্বল থাকে।</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Nutrition -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <div class="gradient-bg p-4 text-white">
+          <h3 class="font-bold text-lg text-center"><i class="fas fa-chart-bar mr-2"></i>সরিষার তেলের পুষ্টিমান (প্রতি ১০০ গ্রাম)</h3>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-0 divide-x divide-y divide-gray-100">
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৮৮৪</div>
+            <div class="text-gray-500 text-sm mt-1">ক্যালরি</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">১০০ গ্রা</div>
+            <div class="text-gray-500 text-sm mt-1">মোট ফ্যাট</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">১১%</div>
+            <div class="text-gray-500 text-sm mt-1">স্যাচুরেটেড ফ্যাট</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৫৯%</div>
+            <div class="text-gray-500 text-sm mt-1">মনোস্যাচুরেটেড ফ্যাট</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২১%</div>
+            <div class="text-gray-500 text-sm mt-1">পলিআনস্যাচুরেটেড ফ্যাট</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২১ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ভিটামিন ই</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">১২২ mcg</div>
+            <div class="text-gray-500 text-sm mt-1">ভিটামিন কে</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">০.২ mg</div>
+            <div class="text-gray-500 text-sm mt-1">বিটা-ক্যারোটিন</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">৬৫০০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ওমেগা-৩</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">১৫০০০ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ওমেগা-৬</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">০.৮ mg</div>
+            <div class="text-gray-500 text-sm mt-1">আয়রন</div>
+          </div>
+          <div class="p-5 text-center">
+            <div class="text-2xl font-bold text-indigo-600">২.৩ mg</div>
+            <div class="text-gray-500 text-sm mt-1">ক্যালসিয়াম</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- সরিষার তেল বনাম অন্যান্য তেল -->
+    <section class="fade-in">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold gradient-text mb-2">সরিষার তেল বনাম অন্যান্য তেল</h2>
+        <p class="text-gray-500">জেনে নিন কেন সরিষার তেল সেরা পছন্দ</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="bg-indigo-50">
+                <th class="py-4 px-6 text-left text-indigo-700 font-bold">বিষয়</th>
+                <th class="py-4 px-6 text-center text-indigo-700 font-bold">🫒 সরিষার তেল</th>
+                <th class="py-4 px-6 text-center text-gray-500 font-bold">🌻 সয়াবিন/পাম তেল</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">উৎপাদন প্রক্রিয়া</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">ঠান্ডা চাপানো (ঘানি)</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">রাসায়নিক পরিশোধিত</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">ওমেগা-৩ ও ওমেগা-৬ অনুপাত</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">সুষম (১:২)</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">অসুষম (১:১৫+)</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">অ্যান্টিঅক্সিডেন্ট</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">প্রচুর (ভিটামিন ই)</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">প্রায় নেই</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">স্মোক পয়েন্ট</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">উচ্চ (২৫০°C)</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm">মাঝারি (২৩০°C)</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">স্বাস্থ্যকরতা</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">✅ অত্যন্ত স্বাস্থ্যকর</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">❌ কম স্বাস্থ্যকর</span></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/50 transition">
+                <td class="py-4 px-6 font-semibold text-gray-700">ঔষধি গুণ</td>
+                <td class="py-4 px-6 text-center"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">অনেক</span></td>
+                <td class="py-4 px-6 text-center"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">নেই</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- কেন আমাদের থেকে নেবেন -->
+    <section class="fade-in">
+      <div class="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl shadow-xl p-10">
+        <div class="text-center mb-10">
+          <h2 class="text-3xl font-bold gradient-text mb-2">কেন সদাই ঘর থেকে নেবেন?</h2>
+          <p class="text-gray-500">আমাদের খাঁটি সরিষার তেল কেনার ৬টি কারণ</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-check-double text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">১০০% খাঁটি ও ভেজালমুক্ত</h3>
+            <p class="text-gray-600 text-sm">কোনো মেশানো তেল, রং বা সংরক্ষক নেই। সরাসরি ঘানি থেকে ঠান্ডা চাপানো খাঁটি সরিষার তেল।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-hand-holding-usd text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">ন্যায্যমূল্য</h3>
+            <p class="text-gray-600 text-sm">মধ্যস্বত্বভোগী ছাড়া সরাসরি উৎপাদনকারী থেকে আনা, তাই প্রতি লিটার ১২০০ টাকায় পাচ্ছেন খাঁটি তেল।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-industry text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">ঐতিহ্যবাহী ঘানি পদ্ধতি</h3>
+            <p class="text-gray-600 text-sm">আমাদের তেল আধুনিক মেশিনে নয়, ঐতিহ্যবাহী ঘানি পদ্ধতিতে ঠান্ডা চাপানো হয়, ফলে পুষ্টিগুণ অক্ষুণ্ণ থাকে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-shipping-fast text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">দ্রুত ডেলিভারি</h3>
+            <p class="text-gray-600 text-sm">অর্ডার করলে ২৪-৪৮ ঘণ্টার মধ্যে আপনার বাড়িতে পৌঁছে দেওয়া হবে সারা বাংলাদেশে।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-box text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">নিরাপদ প্যাকেজিং</h3>
+            <p class="text-gray-600 text-sm">ফুড-গ্রেড প্লাস্টিকের বোতলে দেওয়া হয় যা তেলের মান ও তাজাত্ব বজায় রাখে এবং ছড়িয়ে পড়ার ঝুঁকি কমায়।</p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 text-center card-hover">
+            <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-headset text-white text-2xl"></i>
+            </div>
+            <h3 class="font-bold text-lg mb-2">সার্বক্ষণিক সাপোর্ট</h3>
+            <p class="text-gray-600 text-sm">যেকোনো সমস্যা বা প্রশ্নে আমরা সর্বদা আপনার পাশে আছি। WhatsApp এ যোগাযোগ করুন।</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ব্যবহারের নিয়ম ও টিপস -->
+    <section class="fade-in">
+      <div class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-3xl font-bold gradient-text mb-6 text-center">সরিষার তেল ব্যবহারের উপায় ও টিপস</h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-utensils text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">রান্নায় ব্যবহার</p>
+              <p class="text-gray-600 text-sm">মাছ, মাংস ও তরকারি রান্নায় সরিষার তেল ব্যবহার করুন। প্রথমে তেল গরম করে ধোঁয়া উঠতে দিন, তারপর রান্না করলে ঝাঁঝ কমে ও সুস্বাদু হয়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-fish text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">আচার ও মেরিনেড</p>
+              <p class="text-gray-600 text-sm">আচার সংরক্ষণে সরিষার তেল ব্যবহার করা হয়। এতে আচার নষ্ট হয় না এবং স্বাদ বাড়ে। মাছ মেরিনেডেও ব্যবহার করতে পারেন।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-spa text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">ম্যাসাজ ওয়েল</p>
+              <p class="text-gray-600 text-sm">গরম সরিষার তেল দিয়ে মালিশ করলে পেশির ব্যথা, গাঁটের ব্যথা ও ক্লান্তি দূর হয়। শিশুদের মালিশের জন্য খুবই উপকারী।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-lungs text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">সর্দি-কাশির প্রতিকার</p>
+              <p class="text-gray-600 text-sm">সরিষার তেল গরম করে বুকে-পিঠে মালিশ করুন। রাতে ঘুমানোর আগে নাকে কয়েক ফোঁটা দিলে সর্দি বন্ধ হয়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-scissors text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">চুলের যত্নে</p>
+              <p class="text-gray-600 text-sm">সরিষার তেলের সাথে নারকেল তেল মিশিয়ে চুলের গোড়ায় মালিশ করুন। সপ্তাহে ২ বার ব্যবহার করলে চুল পড়া কমে ও চুল ঘন হয়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-prescription-bottle text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">ফাঙ্গাল ইনফেকশন</p>
+              <p class="text-gray-600 text-sm">সরিষার তেলের অ্যান্টিফাঙ্গাল গুণ পায়ের ফাঙ্গাল ইনফেকশন ও খুশকি দূর করতে সাহায্য করে। আক্রান্ত স্থানে লাগান।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-tooth text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">দাঁতের যত্নে</p>
+              <p class="text-gray-600 text-sm">সরিষার তেলের সাথে লবণ মিশিয়ে দাঁতে ঘষলে দাঁত মজবুত হয় ও মাড়ির ইনফেকশন দূর হয়।</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 p-4 bg-indigo-50 rounded-xl">
+            <div class="gradient-bg w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+              <i class="fas fa-thermometer-half text-white text-sm"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-800 mb-1">সংরক্ষণ পদ্ধতি</p>
+              <p class="text-gray-600 text-sm">সরিষার তেল ঠাণ্ডা ও শুষ্ক স্থানে রাখুন। সরাসরি সূর্যের আলো থেকে দূরে রাখলে দীর্ঘদিন ভালো থাকে।</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="fade-in">
+      <div class="gradient-bg rounded-2xl p-10 text-center text-white relative overflow-hidden">
+        <div class="relative">
+          <h2 class="text-3xl font-bold mb-2">🫒 খাঁটি সরিষার তেল অর্ডার করুন</h2>
+          <p class="text-4xl font-bold mb-2 mt-3">মাত্র ১২০০৳/লিটার</p>
+          <p class="mb-6 opacity-90">সীমিত স্টক — এখনই অর্ডার করুন!</p>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <a href="https://wa.me/8801630089610?text=খাঁটি সরিষার তেল অর্ডার করতে চাই, প্রতি লিটার ১২০০ টাকা"
+              class="bg-white text-indigo-600 font-bold px-8 py-3 rounded-full hover:shadow-xl transition text-lg">
+              <i class="fab fa-whatsapp mr-2"></i> WhatsApp এ অর্ডার করুন
+            </a>
+            <a href="index.html"
+              class="bg-transparent border-2 border-white text-white font-bold px-8 py-3 rounded-full hover:bg-white/10 transition">
+              <i class="fas fa-arrow-left mr-2"></i> হোমে ফিরুন
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4">
+          <div class="gradient-bg w-10 h-10 rounded-full flex items-center justify-center mr-3">
+            <i class="fas fa-store text-white"></i>
+          </div>
+          <h2 class="text-2xl font-bold">সদাই ঘর</h2>
+        </div>
+        <p class="text-gray-300 mb-4">বিশুদ্ধ ও ভেজালমুক্ত পণ্য সরবরাহে আমরা অঙ্গীকারবদ্ধ।</p>
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="https://www.facebook.com/profile.php?id=61587291001067"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/8801630089610"
+            class="bg-white/10 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/20 transition">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="border-t border-white/20 pt-4">
+          <p>&copy; ২০২৬ সদাই ঘর। সর্বস্বত্ব সংরক্ষিত।</p>
+          <p class="text-gray-400 text-sm mt-1">ডিজাইন ও ডেভেলপমেন্ট - Wisetech Agency - (Mamun)</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.addEventListener('click', (event) => {
+      if (!menuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
